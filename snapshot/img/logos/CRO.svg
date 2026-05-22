@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="2168px" height="2503px" viewBox="0 0 2168 2503" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="49.9988171%" y1="-0.000134045155%" x2="49.9988171%" y2="100.000146%" id="linearGradient-1">
+            <stop stop-color="#25376C" offset="0%"></stop>
+            <stop stop-color="#1F1F49" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="49.9989213%" y1="100.000146%" x2="49.9989213%" y2="-0.000134045155%" id="linearGradient-2">
+            <stop stop-color="#25376C" offset="0%"></stop>
+            <stop stop-color="#1F1F49" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill-rule="nonzero">
+            <polygon fill="url(#linearGradient-1)" points="1083.9 0 0 625.6 0 1876.9 1083.9 2502.5 2167.8 1876.9 2167.8 625.6"></polygon>
+            <polygon fill="url(#linearGradient-2)" points="1083.9 0 0 625.6 0 1876.9 1083.9 2502.5"></polygon>
+            <path d="M1506.4,540.6 L655.8,540.6 L557,974.1 L1610.7,974.1 L1506.4,540.6 Z M806.7,1569.6 L806.7,1281.5 L554.3,1122.3 L268.9,1333.6 L658.5,2011.4 L815,2011.4 L998.8,1838.5 L998.8,1753.4 L806.7,1569.6 Z" fill="#FFFFFF"></path>
+            <polygon fill="#FFFFFF" points="1358.3 1040 809.5 1040 900.1 1281.5 872.7 1553.2 1295.3 1553.2 1267.9 1281.5"></polygon>
+            <polygon fill="#FFFFFF" points="1610.7 1119.5 1361 1281.4 1361 1569.5 1171.7 1753.3 1171.7 1838.4 1355.5 2008.5 1509.2 2008.5 1896.1 1333.5"></polygon>
+        </g>
+    </g>
+</svg>

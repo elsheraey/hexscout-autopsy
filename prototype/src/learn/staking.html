@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HEXscout — How HEX staking works</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="app">
+<main class="page">
+<h1 class="page-title">How HEX staking works</h1><p style="color:var(--text-2);font-size:14px;line-height:1.55;">When you call stakeStart, your HEX is burned and the contract issues you T-shares. Each day, all active T-shares earn a share of new HEX inflation.</p><h3 style="margin:22px 0 8px;font-size:16px;">T-share rate</h3><p style="color:var(--text-2);font-size:13px;line-height:1.6;">Today's T-share rate is ~5,232 HEX per T-share. The rate increases only — it never goes down.</p><h3 style="margin:22px 0 8px;font-size:16px;">Daily payout</h3><p style="color:var(--text-2);font-size:13px;line-height:1.6;">Every midnight UTC the contract computes inflation (~0.043% of locked supply per day) and pays it pro-rata to all active T-shares.</p><h3 style="margin:22px 0 8px;font-size:16px;">Penalty mechanics</h3><p style="color:var(--text-2);font-size:13px;line-height:1.6;">End within the first 50% of your term → lose more than your principal. End at maturity → no penalty. End 14 days past maturity → ~1%/week.</p>
+</main>
+</div>
+<script>window.PREFIX="../";</script>
+<script src="../js/data.js"></script>
+<script src="../js/app.js"></script>
+<script>renderShell(null);</script>
+</body>
+</html>

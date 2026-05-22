@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HEXscout — Test page</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+<main class="page">
+
+<h1 class="page-title">Test</h1>
+<p style="color:var(--text-muted);font-size:13px;margin-top:-8px;">Internal QA page. Should never have shipped to production.</p>
+<div class="banner">
+  <div class="ic">🧪</div>
+  <div class="t">If you found this, congrats — you're snooping. The dev forgot to remove it before deploy.</div>
+</div>
+<div class="card">
+  <div class="label">Test components</div>
+  <div class="card-row" style="margin-top:10px;flex-wrap:wrap;gap:8px;justify-content:flex-start;">
+    <button class="btn btn-sm">Default</button>
+    <button class="btn btn-sm btn-primary">Primary</button>
+    <button class="btn btn-sm btn-magenta">Magenta</button>
+    <span class="tag">tag</span><span class="tag pulse">pulse</span><span class="tag eth">eth</span><span class="tag up">up</span><span class="tag down">down</span>
+  </div>
+</div>
+
+</main>
+</div>
+<script>window.PREFIX="";</script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script>renderShell(null);</script>
+</body>
+</html>

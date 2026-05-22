@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HEXscout — Market</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+<main class="page">
+
+  <h1 class="page-title">Market</h1>
+
+  <div class="card gradient">
+    <div class="card-row">
+      <div>
+        <div class="label">HEX (PulseChain)</div>
+        <div class="big-num">$0.0093</div>
+        <div class="delta up">+4.59% (24h)</div>
+      </div>
+      <div style="text-align:right;">
+        <div class="label">Market cap</div>
+        <div style="font-family:'Russo One';font-size:18px;">$1.68B</div>
+        <div class="label" style="margin-top:6px;">Volume</div>
+        <div style="font-family:'Russo One';font-size:16px;">$43.4K</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="toggle-group" style="margin-bottom:14px;">
+      <button>1H</button>
+      <button>1D</button>
+      <button>1W</button>
+      <button class="on">1M</button>
+      <button>1Y</button>
+      <button>ALL</button>
+    </div>
+    <div class="chart-box tall" id="chart-market"></div>
+  </div>
+
+  <div class="section-title">Network stats</div>
+  <div class="stat-grid">
+    <div class="stat"><div class="v">$13.4B</div><div class="l">Total staked</div></div>
+    <div class="stat"><div class="v">38.2%</div><div class="l">Avg APY</div></div>
+    <div class="stat"><div class="v">5,232</div><div class="l">T-share rate</div></div>
+  </div>
+  <div class="stat-grid">
+    <div class="stat"><div class="v">130.7M</div><div class="l">Stakers</div></div>
+    <div class="stat"><div class="v">5,432</div><div class="l">Avg length (d)</div></div>
+    <div class="stat"><div class="v">+0.043%</div><div class="l">Daily payout</div></div>
+  </div>
+
+  <div class="section-title">Top pairs (PulseX)</div>
+  <table class="tbl card" style="padding:6px 12px;">
+    <thead><tr><th>Pair</th><th>Price</th><th>24h</th><th>Liquidity</th></tr></thead>
+    <tbody>
+      <tr><td><span class="ic">H</span>HEX / WPLS</td><td>$0.0093</td><td style="color:var(--green);">+4.6%</td><td>$2.40M</td></tr>
+      <tr><td><span class="ic">H</span>HEX / DAI</td><td>$0.0093</td><td style="color:var(--green);">+4.5%</td><td>$1.81M</td></tr>
+      <tr><td><span class="ic">P</span>PLSX / WPLS</td><td>$0.000035</td><td style="color:var(--green);">+1.2%</td><td>$5.10M</td></tr>
+      <tr><td><span class="ic">I</span>INC / WPLS</td><td>$18.42</td><td style="color:var(--red);">−0.4%</td><td>$0.92M</td></tr>
+    </tbody>
+  </table>
+
+</main>
+</div>
+
+<script>window.PREFIX="";</script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script>
+renderShell("market");
+document.getElementById("chart-market").innerHTML = lineChartSVG(SAMPLE.marketChart);
+const tg = document.querySelector(".toggle-group");
+tg.addEventListener("click", e => {
+  if (e.target.tagName !== "BUTTON") return;
+  tg.querySelectorAll("button").forEach(b => b.classList.remove("on"));
+  e.target.classList.add("on");
+});
+</script>
+</body>
+</html>

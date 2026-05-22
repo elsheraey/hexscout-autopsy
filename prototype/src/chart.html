@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HEXscout — Chart</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+<main class="page">
+
+<h1 class="page-title">Chart</h1>
+<div class="card">
+  <div class="toggle-group" style="margin-bottom:12px;">
+    <button>1m</button><button>5m</button><button>1H</button><button class="on">1D</button><button>1W</button><button>1M</button>
+  </div>
+  <div class="chart-box tall" id="chart-pro"></div>
+  <div style="display:flex;justify-content:space-between;margin-top:10px;font-size:12px;color:var(--text-muted);">
+    <span>Source: DexScreener · TradingView style</span>
+    <span style="color:var(--accent-2);">$0.0093 (+4.59%)</span>
+  </div>
+</div>
+<div class="banner">
+  <div class="ic">📊</div>
+  <div class="t">In the live app this is a full embedded TradingView widget with indicators (RSI, MACD, EMAs). Here it's a static chart.</div>
+</div>
+
+</main>
+</div>
+<script>window.PREFIX="";</script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script>renderShell(null);document.getElementById('chart-pro').innerHTML = lineChartSVG(SAMPLE.marketChart);</script>
+</body>
+</html>

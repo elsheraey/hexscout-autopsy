@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HEXscout — Stats</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+<main class="page">
+
+<h1 class="page-title">Network stats</h1>
+<div class="stat-grid">
+  <div class="stat"><div class="v">130.7M</div><div class="l">Stakers</div></div>
+  <div class="stat"><div class="v">5,432</div><div class="l">Avg length (d)</div></div>
+  <div class="stat"><div class="v">38.2%</div><div class="l">Avg APY</div></div>
+</div>
+<div class="stat-grid">
+  <div class="stat"><div class="v">$13.4B</div><div class="l">Staked value</div></div>
+  <div class="stat"><div class="v">5,232</div><div class="l">T-share rate</div></div>
+  <div class="stat"><div class="v">+0.043%</div><div class="l">Daily payout</div></div>
+</div>
+<div class="section-title">Long-term price</div>
+<div class="card"><div class="chart-box tall" id="lt"></div></div>
+<div class="section-title">Daily payout (last 60d)</div>
+<div class="card"><div class="chart-box" id="payout"></div></div>
+
+</main>
+</div>
+<script>window.PREFIX="";</script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script>renderShell(null);
+document.getElementById('lt').innerHTML = lineChartSVG(SAMPLE.marketChart);
+document.getElementById('payout').innerHTML = lineChartSVG(SAMPLE.marketChart.slice(-60).map(p=>({t:p.t,p:p.p*0.001+0.000003*Math.random()})));
+</script>
+</body>
+</html>

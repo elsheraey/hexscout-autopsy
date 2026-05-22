@@ -1,0 +1,6 @@
+{
+	"appId": "com.hexscout",
+	"appName": "HEXscout",
+	"webDir": "out",
+	"bundledWebRuntime": false
+}

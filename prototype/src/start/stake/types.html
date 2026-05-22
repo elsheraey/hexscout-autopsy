@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HEXscout — Stake type</title>
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+<div class="app">
+<main class="page">
+
+<div class="step-row"><div class="step done"><div class="n">✓</div><div class="l">HEX</div><div class="t">10 min</div></div><div class="step done"><div class="n">✓</div><div class="l">Staking</div><div class="t">10 min</div></div><div class="step done"><div class="n">✓</div><div class="l">Buy</div><div class="t">10-20 min</div></div><div class="step active"><div class="n">4</div><div class="l">Stake</div><div class="t">5 min</div></div><div class="step"><div class="n">5</div><div class="l">HEXscout</div><div class="t">1 min</div></div></div>
+<h1 class="page-title">Pick a stake type</h1>
+<div class="card">
+  <div style="display:flex;gap:10px;align-items:center;margin-bottom:6px;">
+    <div style="width:32px;height:32px;border-radius:50%;background:var(--accent-grad);display:flex;align-items:center;justify-content:center;font-weight:700;color:#1a0f00;">N</div>
+    <div style="font-weight:600;">Native HEX stake</div>
+    <span class="tag up">Simple</span>
+  </div>
+  <p style="font-size:13px;color:var(--text-2);line-height:1.5;">Standard. Your stake lives in the HEX contract under your address. You end it yourself when it matures.</p>
+  <a class="btn btn-primary btn-full" href="../../start/stake/info.html" style="margin-top:10px;">Choose Native</a>
+</div>
+<div class="card">
+  <div style="display:flex;gap:10px;align-items:center;margin-bottom:6px;">
+    <div style="width:32px;height:32px;border-radius:50%;background:var(--magenta-grad);display:flex;align-items:center;justify-content:center;font-weight:700;">H</div>
+    <div style="font-weight:600;">HSI (HEX Stake Instance)</div>
+    <span class="tag">Tradable</span>
+  </div>
+  <p style="font-size:13px;color:var(--text-2);line-height:1.5;">Tokenised. Each stake becomes an NFT you can transfer, sell, or use as collateral on Hedron. End-stake yourself or have a third party do it.</p>
+  <a class="btn btn-magenta btn-full" href="../../start/stake/info.html" style="margin-top:10px;">Choose HSI</a>
+</div>
+
+</main>
+</div>
+<script>window.PREFIX="../../";</script>
+<script src="../../js/data.js"></script>
+<script src="../../js/app.js"></script>
+<script>renderShell(null);</script>
+</body>
+</html>

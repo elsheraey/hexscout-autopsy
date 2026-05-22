@@ -1,0 +1,13 @@
+# The original APK is distributed via GitHub Releases, not tracked in-repo.
+HEX.apk
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vscode/
+.idea/
+
+# Logs
+*.log

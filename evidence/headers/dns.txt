@@ -1,0 +1,10 @@
+### A record
+76.76.21.21
+
+### CNAME variants
+www.hexscout.com -> cname.vercel-dns.com.
+66.33.60.129
+76.76.21.22
+about.hexscout.com -> hexscout.pages.dev.
+172.66.46.231
+172.66.45.25

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HEXscout — Wallet share</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+<main class="page">
+
+<h1 class="page-title">Shared wallet</h1>
+<div class="card gradient">
+  <div style="display:flex;align-items:center;gap:14px;">
+    <div style="width:48px;height:48px;border-radius:50%;background:var(--magenta-grad);display:flex;align-items:center;justify-content:center;font-family:'Russo One';font-size:20px;">M</div>
+    <div style="flex:1;min-width:0;">
+      <div style="font-weight:600;">moonbeam.pls</div>
+      <div style="font-size:12px;color:var(--text-muted);font-family:ui-monospace,monospace;">0xAB12…3F4D</div>
+    </div>
+    <button class="btn btn-sm">Copy</button>
+  </div>
+</div>
+<div class="stat-grid">
+  <div class="stat"><div class="v">$1.35M</div><div class="l">Net worth</div></div>
+  <div class="stat"><div class="v">4,710</div><div class="l">T-shares</div></div>
+  <div class="stat"><div class="v">3</div><div class="l">Stakes</div></div>
+</div>
+<p style="font-size:12px;color:var(--text-muted);text-align:center;margin-top:16px;">Dynamic route: <code>/[a]</code> · receives any wallet address (or ENS / PLS domain) as the URL.</p>
+
+</main>
+</div>
+<script>window.PREFIX="";</script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script>renderShell(null);</script>
+</body>
+</html>

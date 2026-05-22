@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="257px" height="238px" viewBox="0 0 257 238" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g transform="translate(1.000000, 1.000000)" fill-rule="nonzero">
+            <polygon stroke="#E2761B" fill="#E2761B" points="242.3 -1.42108547e-14 142.8 73.9 161.2 30.3"></polygon>
+            <g transform="translate(2.100000, -0.000000)" fill="#E4761B" stroke="#E4761B">
+                <polygon points="10.5 0 109.2 74.6 91.7 30.3"></polygon>
+                <polygon points="204.4 171.3 177.9 211.9 234.6 227.5 250.9 172.2"></polygon>
+                <polygon points="-7.10542736e-15 172.2 16.2 227.5 72.9 211.9 46.4 171.3"></polygon>
+                <polygon points="69.7 102.7 53.9 126.6 110.2 129.1 108.2 68.6"></polygon>
+                <polygon points="181 102.7 142 67.9 140.7 129.1 196.9 126.6"></polygon>
+                <polygon points="72.9 211.9 106.7 195.4 77.5 172.6"></polygon>
+                <polygon points="144 195.4 177.9 211.9 173.2 172.6"></polygon>
+            </g>
+            <g transform="translate(75.000000, 195.400000)" fill="#D7C1B3" stroke="#D7C1B3">
+                <polygon points="105 16.5 71.1 -2.84217094e-14 73.8 22.1 73.5 31.4"></polygon>
+                <polygon points="1.42108547e-14 16.5 31.5 31.4 31.3 22.1 33.8 -2.84217094e-14"></polygon>
+            </g>
+            <polygon stroke="#233447" fill="#233447" points="107 158 78.8 149.7 98.7 140.6"></polygon>
+            <polygon stroke="#233447" fill="#233447" points="147.9 158 156.2 140.6 176.2 149.7"></polygon>
+            <g transform="translate(48.500000, 126.600000)" fill="#CD6116" stroke="#CD6116">
+                <polygon points="26.5 85.3 31.3 44.7 0 45.6"></polygon>
+                <polygon points="126.7 44.7 131.5 85.3 158 45.6"></polygon>
+                <polygon points="150.5 -2.84217094e-14 94.3 2.5 99.5 31.4 107.8 14 127.8 23.1"></polygon>
+                <polygon points="30.3 23.1 50.3 14 58.5 31.4 63.8 2.5 7.5 -2.84217094e-14"></polygon>
+            </g>
+            <g transform="translate(56.000000, 126.600000)" fill="#E4751F" stroke="#E4751F">
+                <polygon points="1.42108547e-14 0 23.6 46 22.8 23.1"></polygon>
+                <polygon points="120.3 23.1 119.3 46 143 0"></polygon>
+                <polygon points="56.3 2.5 51 31.4 57.6 65.5 59.1 20.6"></polygon>
+                <polygon points="86.8 2.5 84.1 20.5 85.3 65.5 92 31.4"></polygon>
+            </g>
+            <polygon stroke="#F6851B" fill="#F6851B" points="148 158 141.3 192.1 146.1 195.4 175.3 172.6 176.3 149.7"></polygon>
+            <polygon stroke="#F6851B" fill="#F6851B" points="78.8 149.7 79.6 172.6 108.8 195.4 113.6 192.1 107 158"></polygon>
+            <polygon stroke="#C0AD9E" fill="#C0AD9E" points="148.5 226.8 148.8 217.5 146.3 215.3 108.6 215.3 106.3 217.5 106.5 226.8 75 211.9 86 220.9 108.3 236.4 146.6 236.4 169 220.9 180 211.9"></polygon>
+            <polygon stroke="#161616" fill="#161616" points="146.1 195.4 141.3 192.1 113.6 192.1 108.8 195.4 106.3 217.5 108.6 215.3 146.3 215.3 148.8 217.5"></polygon>
+            <g transform="translate(0.000000, -0.000000)" fill="#763D16" stroke="#763D16">
+                <polygon points="246.5 78.7 255 37.9 242.3 0 146.1 71.4 183.1 102.7 235.4 118 247 104.5 242 100.9 250 93.6 243.8 88.8 251.8 82.7"></polygon>
+                <polygon points="-1.0658141e-14 37.9 8.5 78.7 3.1 82.7 11.1 88.8 5 93.6 13 100.9 8 104.5 19.5 118 71.8 102.7 108.8 71.4 12.6 0"></polygon>
+            </g>
+            <polygon stroke="#F6851B" fill="#F6851B" points="235.4 118 183.1 102.7 199 126.6 175.3 172.6 206.5 172.2 253 172.2"></polygon>
+            <polygon stroke="#F6851B" fill="#F6851B" points="71.8 102.7 19.5 118 2.1 172.2 48.5 172.2 79.6 172.6 56 126.6"></polygon>
+            <polygon stroke="#F6851B" fill="#F6851B" points="142.8 129.1 146.1 71.4 161.3 30.3 93.8 30.3 108.8 71.4 112.3 129.1 113.5 147.3 113.6 192.1 141.3 192.1 141.5 147.3"></polygon>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HEXscout — Ladder</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+<main class="page">
+
+  <h1 class="page-title">Ladder</h1>
+  <p style="color:var(--text-muted);font-size:13px;margin-top:-8px;">
+    Split one investment across multiple staggered maturity dates.
+  </p>
+
+  <div class="card">
+    <div class="label">Total HEX to ladder</div>
+    <div class="slider-block">
+      <div class="head"><div class="v" id="amt-val">2,000,000 <small>HEX</small></div></div>
+      <input type="range" id="amt-slider" min="100000" max="50000000" step="100000" value="2000000">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="label">Number of rungs</div>
+    <div class="slider-block">
+      <div class="head"><div class="v" id="rungs-val">8</div></div>
+      <input type="range" id="rungs-slider" min="2" max="10" step="1" value="8">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="section-title" style="margin-top:0;">Distribution</div>
+    <div class="chart-box" style="height:160px;" id="bars"></div>
+  </div>
+
+  <div class="card">
+    <div class="section-title" style="margin-top:0;">Ladder schedule</div>
+    <table class="tbl">
+      <thead><tr><th>Year</th><th>Allocation</th><th>HEX</th><th>T-Shares</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+
+  <a class="btn btn-magenta btn-full">⇨ Build this ladder</a>
+
+</main>
+</div>
+
+<script>window.PREFIX="";</script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script>
+renderShell();
+const amtSlider = document.getElementById("amt-slider");
+const amtVal = document.getElementById("amt-val");
+const rungsSlider = document.getElementById("rungs-slider");
+const rungsVal = document.getElementById("rungs-val");
+
+function distribute(rungs, total) {
+  // tent-shape distribution peaking around year 3-4
+  const weights = Array.from({length: rungs}, (_, i) => {
+    const center = (rungs - 1) / 2;
+    return Math.max(0.6, 1 - Math.abs(i - center) / rungs);
+  });
+  const sum = weights.reduce((a, b) => a + b, 0);
+  return weights.map((w, i) => ({
+    y: i + 1,
+    pct: Math.round((w / sum) * 100),
+    hex: Math.round(total * (w / sum)),
+    tshares: ((w / sum) * total / 85000 * (1 + i * 0.18)).toFixed(1),
+  }));
+}
+
+function recalc() {
+  const total = +amtSlider.value;
+  const rungs = +rungsSlider.value;
+  amtVal.innerHTML = total.toLocaleString() + " <small>HEX</small>";
+  rungsVal.textContent = rungs;
+  const d = distribute(rungs, total);
+  document.getElementById("bars").innerHTML = barChartSVG(d);
+  document.getElementById("rows").innerHTML = d.map(r => `
+    <tr>
+      <td>Year ${r.y}</td>
+      <td>${r.pct}%</td>
+      <td>${fmtHEX(r.hex)}</td>
+      <td>${r.tshares}</td>
+    </tr>
+  `).join("");
+}
+bindSlider(amtSlider, recalc);
+bindSlider(rungsSlider, recalc);
+recalc();
+</script>
+</body>
+</html>

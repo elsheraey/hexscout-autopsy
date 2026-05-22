@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>BASE</title>
+    <g id="BASE" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M100,50 C100,22.3857625 77.6142375,0 50,0 C22.3857625,0 0,22.3857625 0,50 C0,77.6142375 100,77.6142375 100,50 Z" id="Oval" fill="#FCF0E3"></path>
+        <circle id="Oval-Copy-2" fill="#E17034" cx="50" cy="50" r="42"></circle>
+        <path d="M50,100 C77.6142375,100 100,77.6142375 100,50 L0,50 C0,77.6142375 22.3857625,100 50,100 Z" id="Oval-Copy" fill="#5D2319"></path>
+    </g>
+</svg>

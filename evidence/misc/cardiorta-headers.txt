@@ -1,0 +1,10 @@
+HTTP/2 402 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain; charset=utf-8
+date: Fri, 15 May 2026 09:26:11 GMT
+server: Vercel
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+x-vercel-error: DEPLOYMENT_DISABLED
+x-vercel-id: fra1::98c2x-1778837171212-ab378764cff4
+content-length: 78
+

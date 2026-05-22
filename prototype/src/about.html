@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HEXscout — About</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+<main class="page">
+  <h1 class="page-title">About</h1>
+
+  <div class="card gradient">
+    <div style="font-family:'Russo One';font-size:26px;margin-bottom:6px;">HEX<span style="background:var(--accent-grad);-webkit-background-clip:text;color:transparent;">scout</span></div>
+    <p style="font-size:14px;color:var(--text-2);line-height:1.5;">
+      Built by Lysithea Development GmbH between 2023 and 2025. A
+      cross-platform portfolio + onboarding tool for HEX on Ethereum and
+      PulseChain. Web app on Vercel, mobile apps wrapped with Capacitor.
+    </p>
+  </div>
+
+  <div class="section-title">Made with</div>
+  <div class="list">
+    <div class="list-row"><span class="ic">▲</span><div class="meta"><div class="t">Next.js</div><div class="s">Pages Router · static export</div></div></div>
+    <div class="list-row"><span class="ic">⚡</span><div class="meta"><div class="t">Capacitor</div><div class="s">@capacitor/app + @capacitor/preferences</div></div></div>
+    <div class="list-row"><span class="ic">🔌</span><div class="meta"><div class="t">wagmi + viem + Web3Modal</div><div class="s">MetaMask, Coinbase, WalletConnect</div></div></div>
+    <div class="list-row"><span class="ic">📈</span><div class="meta"><div class="t">chart.js</div><div class="s">+ chartjs-plugin-annotation</div></div></div>
+    <div class="list-row"><span class="ic">🎨</span><div class="meta"><div class="t">@emotion + moti</div><div class="s">Styling + animation</div></div></div>
+    <div class="list-row"><span class="ic">📊</span><div class="meta"><div class="t">Amplitude</div><div class="s">Analytics</div></div></div>
+  </div>
+
+  <div class="section-title">Data sources</div>
+  <div class="list">
+    <div class="list-row"><span class="ic">📊</span><div class="meta"><div class="t">HEXDailyStats</div><div class="s">hexstats.today (Togosh)</div></div></div>
+    <div class="list-row"><span class="ic">🔄</span><div class="meta"><div class="t">Pulsefusion subgraphs</div><div class="s">HEX + Hedron, both chains</div></div></div>
+    <div class="list-row"><span class="ic">💰</span><div class="meta"><div class="t">CoinGecko Pro</div><div class="s">Historical price charts</div></div></div>
+    <div class="list-row"><span class="ic">🌐</span><div class="meta"><div class="t">PulseChain RPC</div><div class="s">rpc.pulsechain.com + g4mm4 mirror</div></div></div>
+  </div>
+
+  <div class="banner" style="margin-top:14px;">
+    <div class="ic">📦</div>
+    <div class="t"><strong>Retired May 2026.</strong> This prototype is a static museum reconstruction with fabricated sample data.</div>
+  </div>
+</main>
+</div>
+<script>window.PREFIX="";</script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script>renderShell();</script>
+</body>
+</html>

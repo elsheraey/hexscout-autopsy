@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HEXscout — Whalewatch</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+<main class="page">
+  <h1 class="page-title">Whalewatch</h1>
+  <p style="color:var(--text-muted);font-size:13px;margin-top:-8px;">Top 20 HEX holders, sorted by T-Shares.</p>
+
+  <div class="card">
+    <table class="tbl">
+      <thead><tr><th>Address</th><th>T-Shares</th><th>HEX</th><th>Last move</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+
+  <div class="banner" style="margin-top:14px;">
+    <div class="ic">🐳</div>
+    <div class="t">There are <strong>4 wallets</strong> larger than the largest HEX whale wallet listed above. They are excluded by user request.</div>
+  </div>
+</main>
+</div>
+<script>window.PREFIX="";</script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script>
+renderShell();
+document.getElementById("rows").innerHTML = SAMPLE.whales.map(w => `
+  <tr>
+    <td><span class="ic">🐳</span>${w.addr}</td>
+    <td>${w.tshares.toLocaleString()}</td>
+    <td>${fmtHEX(w.totalHEX)}</td>
+    <td>${w.lastMove}</td>
+  </tr>`).join("");
+</script>
+</body>
+</html>

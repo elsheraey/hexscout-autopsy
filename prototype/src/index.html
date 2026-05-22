@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HEXscout — Onboarding</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+<main class="page">
+  <div class="step-row">
+    <div class="step active"><div class="n">1</div><div class="l">HEX</div><div class="t">10 min</div></div>
+    <div class="step"><div class="n">2</div><div class="l">Staking</div><div class="t">10 min</div></div>
+    <div class="step"><div class="n">3</div><div class="l">Buy</div><div class="t">10-20 min</div></div>
+    <div class="step"><div class="n">4</div><div class="l">Stake</div><div class="t">5 min</div></div>
+    <div class="step"><div class="n">5</div><div class="l">HEXscout</div><div class="t">1 min</div></div>
+  </div>
+
+  <div class="card gradient">
+    <div style="display:flex;align-items:center;gap:14px;">
+      <div style="font-family:'Russo One';font-size:42px;line-height:1;background:var(--accent-grad);-webkit-background-clip:text;color:transparent;">100%</div>
+      <div>
+        <div style="font-size:13px;color:var(--text-muted);">Existing for</div>
+        <div style="font-family:'Russo One';font-size:18px;">4 years</div>
+      </div>
+    </div>
+    <div style="display:flex;gap:6px;margin-top:12px;flex-wrap:wrap;">
+      <span class="tag up">✓ Consensus</span>
+      <span class="tag up">✓ Security</span>
+      <span class="tag up">✓ Economics</span>
+      <span class="tag">3 times audited</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="section-title" style="margin-top:0;">Choose your investment</div>
+    <div class="slider-block">
+      <div class="head">
+        <div class="v" id="inv-val">$ 1,038</div>
+        <button class="btn btn-sm">Reset</button>
+      </div>
+      <input type="range" id="inv-slider" min="100" max="10000" step="50" value="1038">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-row" style="margin-bottom:10px;">
+      <div>
+        <div class="label">Historical Performance</div>
+        <div style="font-family:'Russo One';font-size:20px;">$1.04K → <span style="color:var(--green);">17M HEX</span></div>
+      </div>
+      <span class="tag pulse">5 Jan 2020</span>
+    </div>
+    <div class="chart-box" id="chart-home"></div>
+    <div style="font-size:11px;color:var(--text-muted);margin-top:10px;">On 5 January 2020, you could have purchased 17M HEX for $1.04K.</div>
+  </div>
+
+  <a class="btn btn-primary btn-full" href="start.html" style="margin-top:14px;">Explore →</a>
+  <div class="notice">This is a museum prototype of the retired HEXscout app. Numbers are illustrative.</div>
+</main>
+</div>
+
+<script>window.PREFIX="";</script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script>
+renderShell();
+document.getElementById("chart-home").innerHTML = lineChartSVG(SAMPLE.marketChart);
+const sl = document.getElementById("inv-slider");
+const val = document.getElementById("inv-val");
+bindSlider(sl, (v) => val.textContent = "$ " + v.toLocaleString());
+</script>
+</body>
+</html>

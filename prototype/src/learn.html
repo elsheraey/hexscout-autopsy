@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HEXscout — Learn</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+<main class="page">
+  <h1 class="page-title">Learn</h1>
+  <p style="color:var(--text-muted);font-size:13px;margin-top:-8px;">Short, focused explainers to onboard you in under an hour.</p>
+  <div class="list" id="rows"></div>
+</main>
+</div>
+<script>window.PREFIX="";</script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script>
+renderShell();
+document.getElementById("rows").innerHTML = SAMPLE.learn.map(l => `
+  <a class="list-row" href="/learn/${l.slug}">
+    <span class="ic">📘</span>
+    <div class="meta"><div class="t">${l.title}</div><div class="s">${l.summary}</div></div>
+    <span style="color:var(--text-muted);font-size:18px;">›</span>
+  </a>`).join("");
+</script>
+</body>
+</html>

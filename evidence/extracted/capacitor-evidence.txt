@@ -1,0 +1,7 @@
+# Capacitor evidence (verbatim from _app.js)
+
+.d(t,{Uw:function(){return h},fo:function(){return d}});/*! Capacitor: https://capacitorjs.com/ - MIT License */let i=e=>{let t=new Map;t.set("web",{name:"web"});let r=e.CapacitorPlatforms||{currentPlatform:{name:"web"},platforms
+s.get(e))};return r.addPlatform=n,r.setPlatform=i,r},o=e=>e.CapacitorPlatforms=i(e),a=o("undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:void 0!==r.g?r.g:{});a.addPlatform,
+r?void 0:r.bridge)?"ios":"web"},c=e=>{var t,r,i,o,a;let c=e.CapacitorCustomPlatform||null,l=e.Capacitor||{},f=l.Plugins=l.Plugins||{},d=e.CapacitorPlatforms,h=()=>null!==c?c.name:u(e),p=(null===(t=null==d?void 0:d.currentPlatform
+_=(e,t={})=>{let r;let i=k.get(e);if(i)return console.warn(`Capacitor plugin "${e}" already registered. Cannot register plugins twice.`),i.proxy;let o=p(),a=w(e),u=async()=>(!r&&o in t?r=r="function"==typeof t[o]?await t[o]():t[o
+m=l.getPlatform(),l.isNative=l.isNativePlatform(),l},l=e=>e.Capacitor=c(e),f=l("undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:void 0!==r.g?r.g:{}),d=f.registerPlugin;f.Pl

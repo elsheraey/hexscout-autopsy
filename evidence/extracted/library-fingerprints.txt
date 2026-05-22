@@ -1,0 +1,35 @@
+# Library/SDK markers found in _app.js
+
+## Web3
+CoinbaseWallet
+MetaMask
+WalletConnect
+Web3Modal
+ethers
+viem
+wagmi
+web3js
+
+## Mobile bridge
+CapacitorPlatforms
+capacitor
+
+## UI / styling / animation
+@emotion/is-prop-valid
+chart.js
+chartjs
+chartjs-plugin-annotation
+
+## Data fetching
+swr
+
+## Analytics / Observability
+amplitude
+
+## Next.js indicators
+## Next.js indicators (from production HTML)
+__NEXT_DATA__
+_next/static
+next-head-count
+pages/_app
+pages/index

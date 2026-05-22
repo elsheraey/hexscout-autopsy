@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HEXscout — Swap</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+<main class="page">
+  <h1 class="page-title">Swap</h1>
+
+  <div class="card">
+    <div class="label">From</div>
+    <div class="card-row" style="margin-top:8px;align-items:flex-end;">
+      <input id="from" type="text" value="100" style="background:transparent;border:none;outline:none;color:#fff;font-family:'Russo One';font-size:30px;width:60%;">
+      <button class="btn btn-sm" style="background:rgba(255,90,54,0.18);color:#ffb19b;">PLS ▾</button>
+    </div>
+    <div style="font-size:12px;color:var(--text-muted);margin-top:4px;">Balance: 1.48B PLS</div>
+  </div>
+
+  <div style="display:flex;justify-content:center;margin:-8px 0;position:relative;z-index:2;">
+    <button class="icon-btn" style="width:42px;height:42px;background:var(--bg-elev);font-size:20px;">↕</button>
+  </div>
+
+  <div class="card">
+    <div class="label">To (estimated)</div>
+    <div class="card-row" style="margin-top:8px;align-items:flex-end;">
+      <div id="to-val" style="font-family:'Russo One';font-size:30px;color:var(--accent-2);">655.91</div>
+      <button class="btn btn-sm" style="background:rgba(217,44,176,0.18);color:#ffb1d3;">HEX ▾</button>
+    </div>
+    <div style="font-size:12px;color:var(--text-muted);margin-top:4px;">≈ $6.10</div>
+  </div>
+
+  <div class="card">
+    <div class="card-row" style="font-size:13px;color:var(--text-muted);">
+      <span>Price</span><span>1 PLS = 0.00656 HEX</span>
+    </div>
+    <div class="card-row" style="font-size:13px;color:var(--text-muted);margin-top:6px;">
+      <span>Slippage tolerance</span><span style="color:var(--text);">0.5%</span>
+    </div>
+    <div class="card-row" style="font-size:13px;color:var(--text-muted);margin-top:6px;">
+      <span>Routed via</span><span style="color:var(--text);">PulseX → 9mm</span>
+    </div>
+    <div class="card-row" style="font-size:13px;color:var(--text-muted);margin-top:6px;">
+      <span>Network fee</span><span style="color:var(--text);">~$0.001</span>
+    </div>
+  </div>
+
+  <a class="btn btn-magenta btn-full">Swap</a>
+</main>
+</div>
+<script>window.PREFIX="";</script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script>
+renderShell();
+const from = document.getElementById("from");
+from.addEventListener("input", () => {
+  const v = parseFloat(from.value) || 0;
+  document.getElementById("to-val").textContent = (v * 0.00656 * 1000).toFixed(2);
+});
+</script>
+</body>
+</html>

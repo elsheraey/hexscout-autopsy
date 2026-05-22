@@ -1,0 +1,16 @@
+# Likely-meaningful contract addresses (annotated where known)
+
+0x2b591e99afe9f32eaa6214f7b7629768c40eeb39  HEX (Ethereum + PulseChain)
+0x2fa878ab3f87cc1c9737fc071108f904c0b0c95d  INC
+0x3819f64f282bf135d62168c1e513280daf905e06  Hedron
+0x6b175474e89094c44da98b954eedeac495271d0f  DAI
+0x6b32022693210cd2cfc466b9ac0085de8fc34ea6  BASE
+0x8bd3d1472a656e312e94fb1bbdd599b8c51d18e3  HSI Manager
+0x95b303987a60c71504d99aa1b13b4da07b0790ab  PLSX
+0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48  USDC
+0xa1077a294dde1b09bb078844df40758a5d0f9a27  PulseX V1
+0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2  WETH
+0xdac17f958d2ee523a2206206994597c13d831ec7  USDT
+0xf55cd1e399e1cc3d95303048897a680be3313308  COM
+
+# All other addresses in the bundle: see contract-addresses.txt

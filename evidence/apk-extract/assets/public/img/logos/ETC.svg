@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="491px" height="491px" viewBox="0 0 491 491" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ETC</title>
+    <g id="coin-logos" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ETC" fill-rule="nonzero">
+            <path d="M245.2,490.4 C380.6,490.4 490.4,380.6 490.4,245.2 C490.4,109.8 380.6,0 245.2,0 C109.8,0 0,109.8 0,245.2 C0.1,380.6 109.8,490.4 245.2,490.4 Z" id="Path" fill="#3AB83A"></path>
+            <g id="Group-2" transform="translate(128.000000, 57.000000)" fill="#FFFFFF">
+                <polygon id="Path" fill-opacity="0.602" points="117.535246 0 117.535246 139.177388 235.070493 191.671092"></polygon>
+                <polygon id="Path" points="117.535246 0 0 191.671092 117.535246 139.177388"></polygon>
+                <polygon id="Path" fill-opacity="0.602" points="117.535246 281.808308 117.535246 376.32 235.18561 213.543469"></polygon>
+                <polygon id="Path" points="117.535246 376.32 117.535246 281.808308 0 213.543469"></polygon>
+                <polygon id="Path" fill-opacity="0.2" points="117.535246 259.935931 235.070493 191.671092 117.535246 139.177388"></polygon>
+                <polygon id="Path" fill-opacity="0.602" points="0 191.671092 117.535246 259.935931 117.535246 139.177388"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

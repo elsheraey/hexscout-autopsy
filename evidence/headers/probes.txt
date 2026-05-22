@@ -1,0 +1,41 @@
+### https://hexscout.com
+HTTP/2 402 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain; charset=utf-8
+date: Fri, 15 May 2026 09:09:57 GMT
+server: Vercel
+strict-transport-security: max-age=63072000
+x-vercel-error: DEPLOYMENT_DISABLED
+x-vercel-id: fra1::fhxbc-1778836197221-6da33b665468
+content-length: 78
+
+
+### https://www.hexscout.com
+HTTP/2 402 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain; charset=utf-8
+date: Fri, 15 May 2026 09:09:57 GMT
+server: Vercel
+strict-transport-security: max-age=63072000
+x-vercel-error: DEPLOYMENT_DISABLED
+x-vercel-id: fra1::lhxt4-1778836197500-37096544802f
+content-length: 78
+
+
+### https://about.hexscout.com
+HTTP/2 200 
+date: Fri, 15 May 2026 09:09:57 GMT
+content-type: text/html; charset=utf-8
+access-control-allow-origin: *
+cache-control: public, max-age=0, must-revalidate
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=x0WlCYaSC%2BgEjHMF6QCJNJXcdq3Uy%2F2azG1XmoTGRFJDRRBlxFAuAxJJaORx3DIBtS9uaZIbVD1vKdcHq1e%2F8bN3AFqfEjietEGjhkdSdvyMC0OYwZ58ZoMZkiItqfOs8PsWv7c%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-ray: 9fc101bc9ff15f26-PMO
+alt-svc: h3=":443"; ma=86400
+
+
+### https://app.hexscout.com
+

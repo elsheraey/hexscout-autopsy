@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HEXscout · Static Snapshot · All Screens</title>
+<style>
+  :root {
+    --bg: #0f0f1f;
+    --bg2: #1a1838;
+    --card: #1e1c3d;
+    --card-h: #2a2752;
+    --text: #e8e8f4;
+    --muted: #8a86a8;
+    --accent: #ff5a36;
+    --accent2: #f48a1f;
+    --border: #2a2752;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: radial-gradient(at top, #11183b, #110b32); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; min-height: 100%; }
+  header { padding: 32px 40px 20px; max-width: 1280px; margin: 0 auto; }
+  header h1 { margin: 0; font-size: 30px; letter-spacing: -0.02em; }
+  header h1 .badge { background: linear-gradient(90deg, var(--accent), var(--accent2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  header p { color: var(--muted); margin: 6px 0 0; font-size: 14px; max-width: 720px; line-height: 1.5; }
+  header .notice { margin-top: 14px; padding: 12px 16px; background: rgba(255, 90, 54, 0.08); border: 1px solid rgba(255, 90, 54, 0.3); border-radius: 8px; font-size: 13px; color: #ffb19b; }
+  main { padding: 16px 40px 80px; max-width: 1280px; margin: 0 auto; }
+  section { margin-top: 32px; }
+  section h2 { font-size: 18px; margin: 0 0 4px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+  section h2 small { font-weight: normal; text-transform: none; color: var(--muted); margin-left: 8px; font-size: 13px; letter-spacing: 0; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; margin-top: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 14px; text-decoration: none; color: var(--text); display: block; transition: background 0.15s, transform 0.15s, border-color 0.15s; }
+  .card:hover { background: var(--card-h); border-color: var(--accent); transform: translateY(-2px); }
+  .card .thumb { width: 100%; aspect-ratio: 9/16; background: #0a0a1c; border-radius: 8px; margin-bottom: 10px; overflow: hidden; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 11px; }
+  .card .thumb.no-img { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .card .thumb img { width: 100%; height: 100%; object-fit: cover; }
+  .card .route { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: var(--accent); word-break: break-all; }
+  .card .label { font-size: 14px; font-weight: 600; margin: 4px 0 2px; }
+  .card .desc { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  footer { padding: 30px 40px; max-width: 1280px; margin: 0 auto; color: var(--muted); font-size: 12px; border-top: 1px solid var(--border); }
+  code { background: rgba(255,255,255,0.06); padding: 1px 6px; border-radius: 4px; font-size: 12px; }
+</style>
+</head>
+<body>
+<header>
+  <h1><span class="badge">HEXscout</span> · static snapshot</h1>
+  <p>Every screen of the now-retired HEXscout app (v1.0.34), reconstructed from the Android APK. 62 pages. Click any card to open the live HTML.</p>
+  <div class="notice">
+    <strong>Heads up.</strong> This is a static snapshot. Pages render their UI shell, but live data calls (CoinGecko, pulsefusion subgraphs, HEXDailyStats, WalletConnect) will fail since the upstream services aren't being called in your browser context. Layout, copy, fonts, icons, and routing all work.
+  </div>
+</header>
+
+<main>
+
+<section>
+  <h2>Landing & onboarding <small>the marketing-style "Step-by-step Tool"</small></h2>
+  <div class="grid">
+    <a class="card" href="/">
+      <div class="thumb"><img src="/_marketing/onboarding.webp" alt=""></div>
+      <div class="label">Home / Onboarding</div>
+      <div class="route">/</div>
+      <div class="desc">5-step what-if buyback simulator landing page.</div>
+    </a>
+    <a class="card" href="/start"><div class="thumb no-img">/start</div><div class="label">Start</div><div class="route">/start</div><div class="desc">Step 1 of the onboarding flow.</div></a>
+    <a class="card" href="/start/about"><div class="thumb no-img">/start/about</div><div class="label">About HEX</div><div class="route">/start/about</div><div class="desc">"What is HEX" explainer.</div></a>
+    <a class="card" href="/start/buy"><div class="thumb no-img">/start/buy</div><div class="label">Start &rsaquo; Buy</div><div class="route">/start/buy</div><div class="desc">Pick a payment method.</div></a>
+    <a class="card" href="/start/buy/selecthex"><div class="thumb no-img">/start/buy/selecthex</div><div class="label">Select HEX (eHEX/pHEX)</div><div class="route">/start/buy/selecthex</div><div class="desc">Choose which HEX (Ethereum vs PulseChain).</div></a>
+    <a class="card" href="/start/staking"><div class="thumb no-img">/start/staking</div><div class="label">Staking intro</div><div class="route">/start/staking</div><div class="desc">"What is staking" preamble.</div></a>
+    <a class="card" href="/start/stake"><div class="thumb no-img">/start/stake</div><div class="label">Stake setup</div><div class="route">/start/stake</div><div class="desc">Pre-built stake configurator.</div></a>
+    <a class="card" href="/start/stake/types"><div class="thumb no-img">/start/stake/types</div><div class="label">Stake types</div><div class="route">/start/stake/types</div><div class="desc">Native vs HSI vs Ladder.</div></a>
+    <a class="card" href="/start/stake/info"><div class="thumb no-img">/start/stake/info</div><div class="label">Stake info</div><div class="route">/start/stake/info</div><div class="desc">Stake details / confirmation.</div></a>
+    <a class="card" href="/start/stake/execute"><div class="thumb no-img">/start/stake/execute</div><div class="label">Execute stake</div><div class="route">/start/stake/execute</div><div class="desc">Sign the on-chain transaction.</div></a>
+    <a class="card" href="/start/support"><div class="thumb no-img">/start/support</div><div class="label">Start &rsaquo; Support</div><div class="route">/start/support</div><div class="desc">Help offered after onboarding.</div></a>
+  </div>
+</section>
+
+<section>
+  <h2>Portfolio & staking <small>the core dashboard</small></h2>
+  <div class="grid">
+    <a class="card" href="/portfolio">
+      <div class="thumb"><img src="/_marketing/portfolio.webp" alt=""></div>
+      <div class="label">Portfolio</div>
+      <div class="route">/portfolio</div>
+      <div class="desc">Multi-token net worth (eHEX, pHEX, PLS, PLSX, INC, stakes, HSIs).</div>
+    </a>
+    <a class="card" href="/stake">
+      <div class="thumb"><img src="/_marketing/staking.webp" alt=""></div>
+      <div class="label">Stake</div>
+      <div class="route">/stake</div>
+      <div class="desc">Open a new HEX or HSI stake.</div>
+    </a>
+    <a class="card" href="/ladder">
+      <div class="thumb"><img src="/_marketing/ladder-tool.webp" alt=""></div>
+      <div class="label">Ladder</div>
+      <div class="route">/ladder</div>
+      <div class="desc">Split one stake across staggered maturity dates.</div>
+    </a>
+    <a class="card" href="/leagues">
+      <div class="thumb"><img src="/_marketing/leagues.webp" alt=""></div>
+      <div class="label">Leagues</div>
+      <div class="route">/leagues</div>
+      <div class="desc">T-share ranks (Shrimp → Whale).</div>
+    </a>
+    <a class="card" href="/whalewatch"><div class="thumb no-img">/whalewatch</div><div class="label">Whale Watch</div><div class="route">/whalewatch</div><div class="desc">Track large HEX wallets.</div></a>
+    <a class="card" href="/stats"><div class="thumb no-img">/stats</div><div class="label">Stats</div><div class="route">/stats</div><div class="desc">Global HEX network stats.</div></a>
+    <a class="card" href="/settings"><div class="thumb no-img">/settings</div><div class="label">Settings</div><div class="route">/settings</div><div class="desc">App preferences.</div></a>
+  </div>
+</section>
+
+<section>
+  <h2>Market & charts</h2>
+  <div class="grid">
+    <a class="card" href="/market">
+      <div class="thumb"><img src="/_marketing/market.webp" alt=""></div>
+      <div class="label">Market</div>
+      <div class="route">/market</div>
+      <div class="desc">Price chart + key stats.</div>
+    </a>
+    <a class="card" href="/chart"><div class="thumb no-img">/chart</div><div class="label">Chart</div><div class="route">/chart</div><div class="desc">Embedded TradingView + DexScreener.</div></a>
+    <a class="card" href="/deepdive"><div class="thumb no-img">/deepdive</div><div class="label">Deep Dive</div><div class="route">/deepdive</div><div class="desc">Detailed metric explorer.</div></a>
+    <a class="card" href="/liquidity"><div class="thumb no-img">/liquidity</div><div class="label">Liquidity</div><div class="route">/liquidity</div><div class="desc">PulseX LP positions.</div></a>
+    <a class="card" href="/news"><div class="thumb no-img">/news</div><div class="label">News</div><div class="route">/news</div><div class="desc">HEX/PulseChain news feed.</div></a>
+  </div>
+</section>
+
+<section>
+  <h2>Buy / on-ramp / swap</h2>
+  <div class="grid">
+    <a class="card" href="/buy">
+      <div class="thumb"><img src="/_marketing/buy.webp" alt=""></div>
+      <div class="label">Buy</div>
+      <div class="route">/buy</div>
+      <div class="desc">Onramp picker.</div>
+    </a>
+    <a class="card" href="/buy/changenow"><div class="thumb no-img">/buy/changenow</div><div class="label">Buy &rsaquo; ChangeNOW</div><div class="route">/buy/changenow</div><div class="desc">EUR &rarr; HEX via ChangeNOW.</div></a>
+    <a class="card" href="/buy/ramp"><div class="thumb no-img">/buy/ramp</div><div class="label">Buy &rsaquo; Ramp</div><div class="route">/buy/ramp</div><div class="desc">Onramp via Ramp Network.</div></a>
+    <a class="card" href="/buy/transak"><div class="thumb no-img">/buy/transak</div><div class="label">Buy &rsaquo; Transak</div><div class="route">/buy/transak</div><div class="desc">Onramp via Transak.</div></a>
+    <a class="card" href="/buyEmbed"><div class="thumb no-img">/buyEmbed</div><div class="label">Buy embed</div><div class="route">/buyEmbed</div><div class="desc">Embeddable buy widget.</div></a>
+    <a class="card" href="/changenow"><div class="thumb no-img">/changenow</div><div class="label">ChangeNOW</div><div class="route">/changenow</div><div class="desc">Crypto-to-crypto exchange widget.</div></a>
+    <a class="card" href="/letsexchange"><div class="thumb no-img">/letsexchange</div><div class="label">LetsExchange</div><div class="route">/letsexchange</div><div class="desc">Alternative exchange.</div></a>
+    <a class="card" href="/swap">
+      <div class="thumb"><img src="/_marketing/swap.webp" alt=""></div>
+      <div class="label">Swap</div>
+      <div class="route">/swap</div>
+      <div class="desc">In-app DEX swap (current).</div>
+    </a>
+    <a class="card" href="/swap/index_original"><div class="thumb no-img">/swap/index_original</div><div class="label">Swap (original)</div><div class="route">/swap/index_original</div><div class="desc">Previous-gen swap UI, kept around.</div></a>
+    <a class="card" href="/uniswap"><div class="thumb no-img">/uniswap</div><div class="label">Uniswap</div><div class="route">/uniswap</div><div class="desc">Uniswap-routed swap.</div></a>
+    <a class="card" href="/piteas"><div class="thumb no-img">/piteas</div><div class="label">Piteas</div><div class="route">/piteas</div><div class="desc">Piteas aggregator widget.</div></a>
+    <a class="card" href="/gopulse"><div class="thumb no-img">/gopulse</div><div class="label">GoPulse bridge</div><div class="route">/gopulse</div><div class="desc">ETH &rarr; PulseChain bridging.</div></a>
+  </div>
+</section>
+
+<section>
+  <h2>Learn & wiki</h2>
+  <div class="grid">
+    <a class="card" href="/learn"><div class="thumb no-img">/learn</div><div class="label">Learn index</div><div class="route">/learn</div><div class="desc">Top-level learn hub.</div></a>
+    <a class="card" href="/learn/hex"><div class="thumb no-img">/learn/hex</div><div class="label">Learn &rsaquo; HEX</div><div class="route">/learn/hex</div><div class="desc">What is HEX.</div></a>
+    <a class="card" href="/learn/staking"><div class="thumb no-img">/learn/staking</div><div class="label">Learn &rsaquo; Staking</div><div class="route">/learn/staking</div><div class="desc">How staking works.</div></a>
+    <a class="card" href="/learn/ladder"><div class="thumb no-img">/learn/ladder</div><div class="label">Learn &rsaquo; Ladder</div><div class="route">/learn/ladder</div><div class="desc">Ladder strategy.</div></a>
+    <a class="card" href="/learn/crypto"><div class="thumb no-img">/learn/crypto</div><div class="label">Learn &rsaquo; Crypto</div><div class="route">/learn/crypto</div><div class="desc">Crypto basics.</div></a>
+    <a class="card" href="/learn/trade"><div class="thumb no-img">/learn/trade</div><div class="label">Learn &rsaquo; Trade</div><div class="route">/learn/trade</div><div class="desc">How to trade.</div></a>
+    <a class="card" href="/learn/tax"><div class="thumb no-img">/learn/tax</div><div class="label">Learn &rsaquo; Tax</div><div class="route">/learn/tax</div><div class="desc">Tax considerations.</div></a>
+    <a class="card" href="/learn/storage"><div class="thumb no-img">/learn/storage</div><div class="label">Learn &rsaquo; Storage</div><div class="route">/learn/storage</div><div class="desc">Self-custody / wallets.</div></a>
+    <a class="card" href="/learn/trust"><div class="thumb no-img">/learn/trust</div><div class="label">Learn &rsaquo; Trust</div><div class="route">/learn/trust</div><div class="desc">Trust / security model.</div></a>
+    <a class="card" href="/learn/marketing"><div class="thumb no-img">/learn/marketing</div><div class="label">Learn &rsaquo; Marketing</div><div class="route">/learn/marketing</div><div class="desc">Community marketing.</div></a>
+    <a class="card" href="/wiki/main"><div class="thumb no-img">/wiki/[slug]</div><div class="label">Wiki (dynamic)</div><div class="route">/wiki/[[...slug]]</div><div class="desc">Catch-all wiki route. Try /wiki/main.</div></a>
+  </div>
+</section>
+
+<section>
+  <h2>Support & legal</h2>
+  <div class="grid">
+    <a class="card" href="/support"><div class="thumb no-img">/support</div><div class="label">Support</div><div class="route">/support</div><div class="desc">Help requests.</div></a>
+    <a class="card" href="/support/more"><div class="thumb no-img">/support/more</div><div class="label">Support &rsaquo; More</div><div class="route">/support/more</div><div class="desc">Extra help topics.</div></a>
+    <a class="card" href="/support/success"><div class="thumb no-img">/support/success</div><div class="label">Support &rsaquo; Success</div><div class="route">/support/success</div><div class="desc">Confirmation screen.</div></a>
+    <a class="card" href="/support/adm"><div class="thumb no-img">/support/adm</div><div class="label">Support &rsaquo; Admin</div><div class="route">/support/adm</div><div class="desc">Admin-side support inbox.</div></a>
+    <a class="card" href="/about"><div class="thumb no-img">/about</div><div class="label">About</div><div class="route">/about</div><div class="desc">About HEXscout.</div></a>
+    <a class="card" href="/brand"><div class="thumb no-img">/brand</div><div class="label">Brand</div><div class="route">/brand</div><div class="desc">Logo / press kit.</div></a>
+    <a class="card" href="/disclaimer"><div class="thumb no-img">/disclaimer</div><div class="label">Disclaimer</div><div class="route">/disclaimer</div><div class="desc">Legal disclaimer.</div></a>
+    <a class="card" href="/privacy"><div class="thumb no-img">/privacy</div><div class="label">Privacy</div><div class="route">/privacy</div><div class="desc">Privacy policy.</div></a>
+    <a class="card" href="/tos"><div class="thumb no-img">/tos</div><div class="label">Terms of Service</div><div class="route">/tos</div><div class="desc">Terms of service.</div></a>
+  </div>
+</section>
+
+<section>
+  <h2>Internal / curious</h2>
+  <div class="grid">
+    <a class="card" href="/app"><div class="thumb no-img">/app</div><div class="label">App shell</div><div class="route">/app</div><div class="desc">Inner app entrypoint.</div></a>
+    <a class="card" href="/admin2000"><div class="thumb no-img">/admin2000</div><div class="label">Admin</div><div class="route">/admin2000</div><div class="desc">Admin panel.</div></a>
+    <a class="card" href="/admin2000/news"><div class="thumb no-img">/admin2000/news</div><div class="label">Admin &rsaquo; News</div><div class="route">/admin2000/news</div><div class="desc">Internal news editor.</div></a>
+    <a class="card" href="/pulse"><div class="thumb no-img">/pulse</div><div class="label">Pulse landing</div><div class="route">/pulse</div><div class="desc">PulseChain-focused landing.</div></a>
+    <a class="card" href="/test"><div class="thumb no-img">/test</div><div class="label">Test</div><div class="route">/test</div><div class="desc">Dev/test page left in production.</div></a>
+    <a class="card" href="/[a]"><div class="thumb no-img">/[a]</div><div class="label">Wallet share (dynamic)</div><div class="route">/[a]</div><div class="desc">Catch-all for wallet-address share URLs (/0x…).</div></a>
+    <a class="card" href="/404"><div class="thumb no-img">404</div><div class="label">404</div><div class="route">/404</div><div class="desc">Not-found page.</div></a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  Snapshot generated 2026-05-15 from <code>dev.cardio.hexscout</code> v1.0.34. Pages, images, CSS and JS chunks are served locally. Fonts and live data calls still reach the public internet — block them at the network layer for fully offline use.
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HEXscout — Configure stake</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="app">
+<main class="page">
+
+<div class="step-row"><div class="step done"><div class="n">✓</div><div class="l">HEX</div><div class="t">10 min</div></div><div class="step done"><div class="n">✓</div><div class="l">Staking</div><div class="t">10 min</div></div><div class="step done"><div class="n">✓</div><div class="l">Buy</div><div class="t">10-20 min</div></div><div class="step active"><div class="n">4</div><div class="l">Stake</div><div class="t">5 min</div></div><div class="step"><div class="n">5</div><div class="l">HEXscout</div><div class="t">1 min</div></div></div>
+<h1 class="page-title">Configure your stake</h1>
+<div class="card">
+  <div class="label">Amount</div>
+  <div class="slider-block">
+    <div class="head"><div class="v" id="amt-val">200,000 <small>HEX</small></div></div>
+    <input type="range" id="amt-slider" min="1000" max="10000000" step="1000" value="200000">
+  </div>
+</div>
+<div class="card">
+  <div class="label">Length</div>
+  <div class="slider-block">
+    <div class="head"><div class="v" id="days-val">1,825 <small>days (5y)</small></div></div>
+    <input type="range" id="days-slider" min="30" max="5555" step="1" value="1825">
+  </div>
+</div>
+<div class="card gradient">
+  <div class="card-row"><span>Effective HEX</span><span style="font-family:'Russo One';" id="effective">368,200</span></div>
+  <div class="card-row" style="margin-top:8px;"><span>T-shares</span><span style="font-family:'Russo One';color:var(--accent-2);" id="tsh">4.33</span></div>
+  <div class="card-row" style="margin-top:8px;"><span>Maturity</span><span id="maturity-d">24 Dec 2029</span></div>
+</div>
+<a class="btn btn-primary btn-full" href="../start/stake/types.html">Pick stake type →</a>
+
+</main>
+</div>
+<script>window.PREFIX="../";</script>
+<script src="../js/data.js"></script>
+<script src="../js/app.js"></script>
+<script>renderShell(null);var a=document.getElementById('amt-slider');var d=document.getElementById('days-slider');var av=document.getElementById('amt-val');var dv=document.getElementById('days-val');var ef=document.getElementById('effective');var ts=document.getElementById('tsh');var mt=document.getElementById('maturity-d');function r(){var A=+a.value,D=+d.value;av.innerHTML=A.toLocaleString()+' <small>HEX</small>';var yrs=(D/365).toFixed(1);dv.innerHTML=D.toLocaleString()+' <small>days ('+yrs+'y)</small>';var eff=Math.round(A*(1+Math.min(0.1,A/2e6))*(1+Math.min(2,D/2700)));ef.textContent=eff.toLocaleString();ts.textContent=(eff/85000).toFixed(2);var dt=new Date(2024,0,24+D);mt.textContent=dt.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'})}bindSlider(a,r);bindSlider(d,r);r();</script>
+</body>
+</html>

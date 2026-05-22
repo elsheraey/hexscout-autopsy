@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HEXscout — Settings</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+<main class="page">
+  <h1 class="page-title">Settings</h1>
+
+  <div class="card">
+    <div style="display:flex;align-items:center;gap:14px;">
+      <div style="width:44px;height:44px;border-radius:50%;background:var(--accent-grad);display:inline-flex;align-items:center;justify-content:center;font-family:'Russo One';font-size:18px;">M</div>
+      <div style="flex:1;">
+        <div style="font-weight:600;">moonbeam.pls</div>
+        <div style="font-size:12px;color:var(--text-muted);">0xAB12…3F4D</div>
+      </div>
+      <button class="btn btn-sm">Disconnect</button>
+    </div>
+  </div>
+
+  <div class="section-title">Preferences</div>
+  <div class="card" style="padding:6px 12px;">
+    <div class="card-row" style="padding:12px 4px;border-bottom:1px solid var(--border);">
+      <div><div style="font-weight:600;">Display currency</div><div style="font-size:12px;color:var(--text-muted);">USD</div></div>
+      <button class="btn btn-sm">USD ▾</button>
+    </div>
+    <div class="card-row" style="padding:12px 4px;border-bottom:1px solid var(--border);">
+      <div><div style="font-weight:600;">Default network</div><div style="font-size:12px;color:var(--text-muted);">PulseChain</div></div>
+      <button class="btn btn-sm">PulseChain ▾</button>
+    </div>
+    <div class="card-row" style="padding:12px 4px;border-bottom:1px solid var(--border);">
+      <div><div style="font-weight:600;">Privacy mode</div><div style="font-size:12px;color:var(--text-muted);">Hide balances when screenshots are taken</div></div>
+      <div class="switch" data-on="0" onclick="this.classList.toggle('on')"></div>
+    </div>
+    <div class="card-row" style="padding:12px 4px;border-bottom:1px solid var(--border);">
+      <div><div style="font-weight:600;">Notifications</div><div style="font-size:12px;color:var(--text-muted);">Stake-end reminders 7 days ahead</div></div>
+      <div class="switch on" onclick="this.classList.toggle('on')"></div>
+    </div>
+    <div class="card-row" style="padding:12px 4px;">
+      <div><div style="font-weight:600;">Reduce motion</div><div style="font-size:12px;color:var(--text-muted);">Disable hover and entrance animations</div></div>
+      <div class="switch" onclick="this.classList.toggle('on')"></div>
+    </div>
+  </div>
+
+  <div class="section-title">About</div>
+  <div class="card" style="padding:6px 12px;">
+    <div class="card-row" style="padding:12px 4px;border-bottom:1px solid var(--border);">
+      <span>Version</span><span style="color:var(--text-muted);">1.0.34 · museum</span>
+    </div>
+    <div class="card-row" style="padding:12px 4px;border-bottom:1px solid var(--border);">
+      <a href="about.html">About HEXscout</a><span style="color:var(--text-muted);">›</span>
+    </div>
+    <div class="card-row" style="padding:12px 4px;border-bottom:1px solid var(--border);">
+      <a href="tos.html">Terms of service</a><span style="color:var(--text-muted);">›</span>
+    </div>
+    <div class="card-row" style="padding:12px 4px;">
+      <a href="privacy.html">Privacy policy</a><span style="color:var(--text-muted);">›</span>
+    </div>
+  </div>
+</main>
+</div>
+<script>window.PREFIX="";</script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script>renderShell("wallet");</script>
+</body>
+</html>

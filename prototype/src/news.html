@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HEXscout — News</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+<main class="page">
+  <h1 class="page-title">News</h1>
+  <div class="toggle-group" style="margin-bottom:16px;">
+    <button class="on">All</button><button>Ecosystem</button><button>Network</button><button>Maxi</button>
+  </div>
+  <div class="list" id="rows"></div>
+</main>
+</div>
+<script>window.PREFIX="";</script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script>
+renderShell("news");
+document.getElementById("rows").innerHTML = SAMPLE.news.map(n => `
+  <div class="list-row">
+    <span class="ic">📰</span>
+    <div class="meta">
+      <div class="t">${n.title}</div>
+      <div class="s">${n.src} · ${n.ago}</div>
+    </div>
+    <span class="tag">${n.cat}</span>
+  </div>`).join("");
+</script>
+</body>
+</html>

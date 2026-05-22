@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="2000px" height="2000px" viewBox="0 0 2000 2000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>eth</title>
+    <g id="eth" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(386.000000, 0.000000)" fill-rule="nonzero">
+            <polygon fill="#343434" points="613.82 0 600.42 45.58 600.42 1368 613.82 1381.38 1227.64 1018.56"></polygon>
+            <polygon fill="#8C8C8C" points="613.82 0 0 1018.56 613.82 1381.4"></polygon>
+            <polygon fill="#3C3C3B" points="613.82 1497.64 606.26 1506.86 606.26 1978 613.82 2000 1228 1135"></polygon>
+            <polygon fill="#8C8C8C" points="613.82 2000 613.82 1497.62 0 1135"></polygon>
+            <polyline fill="#141414" points="613.82 1381.4 1227.62 1018.56 613.82 739.56 613.82 1381.4"></polyline>
+            <polyline fill="#393939" points="0 1018.56 613.8 1381.4 613.8 739.54"></polyline>
+        </g>
+    </g>
+</svg>

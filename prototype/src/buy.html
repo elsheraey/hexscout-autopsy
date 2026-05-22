@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HEXscout — Buy</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+<main class="page">
+  <h1 class="page-title">Buy HEX</h1>
+
+  <div class="card gradient">
+    <div class="label">Get HEX with</div>
+    <div class="card-row" style="margin-top:6px;">
+      <button class="btn btn-sm" style="background:rgba(255,255,255,0.1);">EUR ▾</button>
+      <span style="font-family:'Russo One';font-size:18px;">€500</span>
+    </div>
+    <div style="font-size:13px;color:var(--text-muted);margin-top:8px;">≈ 53,763 HEX at $0.0093</div>
+  </div>
+
+  <div class="section-title">Payment methods</div>
+  <div class="list" id="ramps"></div>
+
+  <div class="banner" style="margin-top:18px;">
+    <div class="ic">⚠</div>
+    <div class="t"><strong>Heads up.</strong> Each ramp charges a different fee and supports different countries. The first option below is usually cheapest for EU users.</div>
+  </div>
+</main>
+</div>
+<script>window.PREFIX="";</script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script>
+renderShell();
+document.getElementById("ramps").innerHTML = SAMPLE.ramps.map((r, i) => `
+  <a class="list-row" href="buy/${r.name.toLowerCase().replace(/ /g,'')}.html">
+    <span class="ic">${r.name[0]}</span>
+    <div class="meta"><div class="t">${r.name}</div><div class="s">${r.note}</div></div>
+    <div class="v"><div class="t">${r.fee}</div><div class="s">${r.est}</div></div>
+  </a>`).join("");
+</script>
+</body>
+</html>

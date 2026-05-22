@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HEXscout — Portfolio</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+<main class="page">
+
+  <h1 class="page-title">Portfolio</h1>
+
+  <div class="card">
+    <div class="card-row">
+      <div>
+        <div class="label">eHEX</div>
+        <div style="font-family:'Russo One';font-size:18px;">$0.0051</div>
+        <div class="delta down">−2.38%</div>
+      </div>
+      <div>
+        <div class="label">pHEX</div>
+        <div style="font-family:'Russo One';font-size:18px;">$0.0093</div>
+        <div class="delta up">+4.59%</div>
+      </div>
+      <div>
+        <div class="label">PLS</div>
+        <div style="font-family:'Russo One';font-size:18px;">$0.000061</div>
+        <div class="delta up">+1.21%</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div style="display:flex;justify-content:center;margin:6px 0;" id="donut"></div>
+    <div class="legend" id="legend"></div>
+  </div>
+
+  <div class="stat-grid">
+    <div class="stat"><div class="v" id="hex-total">130.1M</div><div class="l">HEX total</div></div>
+    <div class="stat"><div class="v" id="yield">972K</div><div class="l">Daily yield</div></div>
+    <div class="stat"><div class="v">+2.4%</div><div class="l">24h</div></div>
+  </div>
+
+  <div class="section-title">Other Assets — $382K</div>
+  <div class="list" id="assets"></div>
+
+  <div class="section-title">Active Stakes</div>
+  <div class="list" id="stakes"></div>
+
+  <a class="btn btn-magenta btn-full" href="stake.html" style="margin-top:14px;">Start a new stake</a>
+
+</main>
+</div>
+
+<script>window.PREFIX="";</script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script>
+renderShell("portfolio");
+
+const p = SAMPLE.portfolio;
+
+// Donut
+document.getElementById("donut").innerHTML = donutSVG(
+  p.breakdown.map(b => ({ color: b.color, pct: b.pct })),
+  { size: 200, stroke: 22, gap: 1.2, center: fmtUSD(p.networthUSD, { compact: true }) }
+);
+document.getElementById("legend").innerHTML = p.breakdown.map(b =>
+  `<div class="row"><span class="sw" style="background:${b.color}"></span>
+     <span class="name">${b.name}</span>
+     <span class="pct">${b.pct.toFixed(1)}%</span>
+     <span style="min-width:62px;text-align:right;">${fmtUSD(b.usd, { compact: true })}</span></div>`
+).join("");
+
+document.getElementById("hex-total").textContent = fmtHEX(p.totals.hex);
+document.getElementById("yield").textContent = fmtHEX(p.stakeYield24h);
+
+document.getElementById("assets").innerHTML = SAMPLE.assets.map(a => `
+  <div class="list-row">
+    <span class="ic">${a.sym[0]}</span>
+    <div class="meta"><div class="t">${a.name}</div><div class="s">${a.sym}</div></div>
+    <div class="v">
+      <div class="t">${fmtUSD(a.usd, { compact: true })}</div>
+      <div class="s">${fmtHEX(a.bal)} ${a.sym}</div>
+    </div>
+  </div>
+`).join("");
+
+document.getElementById("stakes").innerHTML = SAMPLE.stakes.map(s => `
+  <div class="list-row">
+    <span class="ic">${s.chain === "PulseChain" ? "P" : "E"}</span>
+    <div class="meta">
+      <div class="t">${s.type} <span class="tag ${s.chain === "PulseChain" ? "pulse" : "eth"}">${s.chain}</span></div>
+      <div class="s">${s.tshares.toFixed(1)} T-Shares · ends ${s.endDate}</div>
+      <div style="height:4px;border-radius:2px;background:rgba(255,255,255,0.08);margin-top:6px;overflow:hidden;">
+        <div style="height:100%;width:${s.progress}%;background:var(--accent-grad);"></div>
+      </div>
+    </div>
+    <div class="v">
+      <div class="t">${fmtHEX(s.principal)}</div>
+      <div class="s">${s.progress}% done</div>
+    </div>
+  </div>
+`).join("");
+</script>
+</body>
+</html>
