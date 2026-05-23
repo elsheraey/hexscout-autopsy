@@ -3,7 +3,7 @@
 Source APK: [`hexscout/HEX.apk`](../../HEX.apk) (54 MB,
 `dev.cardio.hexscout` v1.0.34, pulled via `adb`)
 
-Extracted to: [`hexscout/evidence/apk-extract/`](../apk-extract/) — 62 MB, 683
+Extracted to: [`hexscout/dump/apk-extract/`](../apk-extract/) — 62 MB, 683
 files.
 
 ## What lives where

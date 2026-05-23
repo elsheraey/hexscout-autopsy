@@ -8,9 +8,9 @@ This repo holds three independent artifacts:
 
 | Folder | What it is |
 |---|---|
-| [`evidence/`](evidence/) | Forensic dump — 78 archived JS chunks across 17 production builds (June 2023 → Jan 2026) recovered via the Wayback Machine, plus a source-leak hunt, API/contract inventories, and notes on credentials that shipped in the client bundles. Start at [`evidence/README.md`](evidence/README.md). |
+| [`dump/`](dump/) | Forensic dump - 78 archived JS chunks across 17 production builds (June 2023 → Jan 2026) recovered via the Wayback Machine, plus a source-leak hunt, API/contract inventories, and notes on credentials that shipped in the client bundles. Start at [`dump/README.md`](dump/README.md). |
 | [`snapshot/`](snapshot/) | A locally-serveable mirror of the production app (v1.0.34) extracted from the Android APK. 62 routes, 249 images, all JS chunks. `cd snapshot && python3 serve.py`. See [`snapshot/README.md`](snapshot/README.md). |
-| [`prototype/`](prototype/) | A clean, from-scratch "museum" reconstruction — pure static HTML/CSS/JS, every number fabricated, 64 screens, no build step. Open [`prototype/sitemap.html`](prototype/sitemap.html) in a browser. See [`prototype/README.md`](prototype/README.md). |
+| [`prototype/`](prototype/) | A clean, from-scratch "museum" reconstruction - pure static HTML/CSS/JS, every number fabricated, 64 screens, no build step. Open [`prototype/sitemap.html`](prototype/sitemap.html) in a browser. See [`prototype/README.md`](prototype/README.md). |
 
 Marketing screenshots that fed the reconstruction live in [`images/`](images/).
 Source links (App Store, Play Store, marketing site, review videos) are

@@ -1,161 +1,165 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HEXscout — Museum Index</title>
-<link rel="stylesheet" href="src/css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HEXscout — Museum Index</title>
+  <link rel="stylesheet" href="src/css/style.css">
 </head>
+
 <body>
-<div class="museum">
-  <h1>HEX<span style="background:var(--accent-grad);-webkit-background-clip:text;color:transparent;">scout</span> — museum</h1>
-  <p class="lede">A clickable prototype of every screen the real HEXscout app shipped (60+ routes), rebuilt from scratch with its actual fonts, palette, layouts, and recovered image assets. Every number is fabricated.</p>
+  <div class="museum">
+    <h1>HEX<span style="background:var(--accent-grad);-webkit-background-clip:text;color:transparent;">scout</span> —
+      museum</h1>
+    <p class="lede">A clickable prototype of every screen the real HEXscout app shipped (60+ routes), rebuilt from
+      scratch with its actual fonts, palette, layouts, and recovered image assets. Every number is fabricated.</p>
 
-  <div id="sections"></div>
+    <div id="sections"></div>
 
-  <p class="notice" style="margin-top:36px;">
-    Source-recovery artifacts of the real (retired) app are at
-    <code>hexscout/snapshot/</code> (the bundled web build inside the APK) and
-    <code>hexscout/evidence/</code> (the leak-hunt report + historical JS chunks).
-  </p>
-</div>
+    <p class="notice" style="margin-top:36px;">
+      Source-recovery artifacts of the real (retired) app are at
+      <code>hexscout/snapshot/</code> (the bundled web build inside the APK) and
+      <code>hexscout/dump/</code> (the leak-hunt report + historical JS chunks).
+    </p>
+  </div>
 
-<script>
-const SECTIONS = [
-  {
-    title: "Landing & onboarding",
-    desc: "The 5-step interactive tour HEXscout was known for.",
-    routes: [
-      { path: "src/index.html",                       label: "Home / Onboarding",        thumb: "src/img-marketing/onboarding.webp" },
-      { path: "src/start.html",                  label: "Start (overview)" },
-      { path: "src/start/about.html",            label: "About HEX" },
-      { path: "src/start/staking.html",          label: "Staking explained" },
-      { path: "src/start/buy.html",              label: "Get HEX" },
-      { path: "src/start/buy/selecthex.html",    label: "eHEX vs pHEX" },
-      { path: "src/start/buy/creditCard.html",   label: "Credit card → HEX" },
-      { path: "src/start/buy/wireTransfer.html", label: "SEPA → HEX" },
-      { path: "src/start/stake.html",            label: "Configure stake" },
-      { path: "src/start/stake/types.html",      label: "Native vs HSI" },
-      { path: "src/start/stake/info.html",       label: "Confirm stake" },
-      { path: "src/start/stake/execute.html",    label: "Sign with wallet" },
-      { path: "src/start/support.html",          label: "Get support" },
-    ],
-  },
-  {
-    title: "Portfolio & staking",
-    desc: "The core dashboard.",
-    routes: [
-      { path: "src/portfolio.html",  label: "Portfolio",    thumb: "src/img-marketing/portfolio.webp" },
-      { path: "src/stake.html",      label: "Stake",        thumb: "src/img-marketing/staking.webp" },
-      { path: "src/ladder.html",     label: "Ladder",       thumb: "src/img-marketing/ladder-tool.webp" },
-      { path: "src/leagues.html",    label: "Leagues",      thumb: "src/img-marketing/leagues.webp" },
-      { path: "src/whalewatch.html", label: "Whalewatch" },
-      { path: "src/settings.html",   label: "Settings" },
-    ],
-  },
-  {
-    title: "Market & charts",
-    routes: [
-      { path: "src/market.html",    label: "Market",     thumb: "src/img-marketing/market.webp" },
-      { path: "src/chart.html",     label: "Chart (TradingView style)" },
-      { path: "src/deepdive.html",  label: "Deep Dive (metrics)" },
-      { path: "src/liquidity.html", label: "Liquidity (TVL)" },
-      { path: "src/stats.html",     label: "Network stats" },
-      { path: "src/news.html",      label: "News" },
-    ],
-  },
-  {
-    title: "Buy / on-ramp / swap",
-    routes: [
-      { path: "src/buy.html",            label: "Buy (picker)",   thumb: "src/img-marketing/buy.webp" },
-      { path: "src/buy/changenow.html",  label: "Buy via ChangeNOW" },
-      { path: "src/buy/ramp.html",       label: "Buy via Ramp" },
-      { path: "src/buy/transak.html",    label: "Buy via Transak" },
-      { path: "src/buy/services.html",   label: "All buy services" },
-      { path: "src/changenow.html",      label: "ChangeNOW (full)" },
-      { path: "src/buyEmbed.html",       label: "Buy widget (embed)" },
-      { path: "src/letsexchange.html",   label: "LetsExchange" },
-      { path: "src/swap.html",           label: "Swap",           thumb: "src/img-marketing/swap.webp" },
-      { path: "src/swap/index_original.html", label: "Swap (legacy)" },
-      { path: "src/uniswap.html",        label: "Uniswap (eHEX)" },
-      { path: "src/piteas.html",         label: "Piteas aggregator" },
-      { path: "src/pulse.html",          label: "PulseChain router" },
-      { path: "src/gopulse.html",        label: "Bridge to PulseChain" },
-    ],
-  },
-  {
-    title: "Learn & wiki",
-    routes: [
-      { path: "src/learn.html",            label: "Learn (index)" },
-      { path: "src/learn/hex.html",        label: "What is HEX?" },
-      { path: "src/learn/staking.html",    label: "How staking works" },
-      { path: "src/learn/ladder.html",     label: "Why ladder" },
-      { path: "src/learn/crypto.html",     label: "Crypto basics" },
-      { path: "src/learn/tax.html",        label: "Tax considerations" },
-      { path: "src/learn/storage.html",    label: "Self-custody" },
-      { path: "src/learn/trade.html",      label: "Trading on PulseX" },
-      { path: "src/learn/trust.html",      label: "Trust & audits" },
-      { path: "src/learn/marketing.html",  label: "Community marketing" },
-      { path: "src/wiki.html",             label: "Wiki" },
-    ],
-  },
-  {
-    title: "Support & legal",
-    routes: [
-      { path: "src/support.html",          label: "Support" },
-      { path: "src/support/more.html",     label: "More help" },
-      { path: "src/support/success.html",  label: "Submitted ✓" },
-      { path: "src/support/adm.html",      label: "Support inbox (admin)" },
-      { path: "src/about.html",            label: "About" },
-      { path: "src/brand.html",            label: "Brand kit" },
-      { path: "src/disclaimer.html",       label: "Disclaimer" },
-      { path: "src/privacy.html",          label: "Privacy" },
-      { path: "src/tos.html",              label: "Terms of service" },
-    ],
-  },
-  {
-    title: "Internal / curious",
-    routes: [
-      { path: "src/app.html",              label: "App shell entry" },
-      { path: "src/admin2000.html",        label: "Admin tools" },
-      { path: "src/admin2000/news.html",   label: "News editor" },
-      { path: "src/[a].html",              label: "Wallet share (dynamic)", actual: "src/[a].html" },
-      { path: "src/test.html",             label: "Test (dev forgot to remove)" },
-    ],
-  },
-];
+  <script>
+    const SECTIONS = [
+      {
+        title: "Landing & onboarding",
+        desc: "The 5-step interactive tour HEXscout was known for.",
+        routes: [
+          { path: "src/index.html", label: "Home / Onboarding", thumb: "src/img-marketing/onboarding.webp" },
+          { path: "src/start.html", label: "Start (overview)" },
+          { path: "src/start/about.html", label: "About HEX" },
+          { path: "src/start/staking.html", label: "Staking explained" },
+          { path: "src/start/buy.html", label: "Get HEX" },
+          { path: "src/start/buy/selecthex.html", label: "eHEX vs pHEX" },
+          { path: "src/start/buy/creditCard.html", label: "Credit card → HEX" },
+          { path: "src/start/buy/wireTransfer.html", label: "SEPA → HEX" },
+          { path: "src/start/stake.html", label: "Configure stake" },
+          { path: "src/start/stake/types.html", label: "Native vs HSI" },
+          { path: "src/start/stake/info.html", label: "Confirm stake" },
+          { path: "src/start/stake/execute.html", label: "Sign with wallet" },
+          { path: "src/start/support.html", label: "Get support" },
+        ],
+      },
+      {
+        title: "Portfolio & staking",
+        desc: "The core dashboard.",
+        routes: [
+          { path: "src/portfolio.html", label: "Portfolio", thumb: "src/img-marketing/portfolio.webp" },
+          { path: "src/stake.html", label: "Stake", thumb: "src/img-marketing/staking.webp" },
+          { path: "src/ladder.html", label: "Ladder", thumb: "src/img-marketing/ladder-tool.webp" },
+          { path: "src/leagues.html", label: "Leagues", thumb: "src/img-marketing/leagues.webp" },
+          { path: "src/whalewatch.html", label: "Whalewatch" },
+          { path: "src/settings.html", label: "Settings" },
+        ],
+      },
+      {
+        title: "Market & charts",
+        routes: [
+          { path: "src/market.html", label: "Market", thumb: "src/img-marketing/market.webp" },
+          { path: "src/chart.html", label: "Chart (TradingView style)" },
+          { path: "src/deepdive.html", label: "Deep Dive (metrics)" },
+          { path: "src/liquidity.html", label: "Liquidity (TVL)" },
+          { path: "src/stats.html", label: "Network stats" },
+          { path: "src/news.html", label: "News" },
+        ],
+      },
+      {
+        title: "Buy / on-ramp / swap",
+        routes: [
+          { path: "src/buy.html", label: "Buy (picker)", thumb: "src/img-marketing/buy.webp" },
+          { path: "src/buy/changenow.html", label: "Buy via ChangeNOW" },
+          { path: "src/buy/ramp.html", label: "Buy via Ramp" },
+          { path: "src/buy/transak.html", label: "Buy via Transak" },
+          { path: "src/buy/services.html", label: "All buy services" },
+          { path: "src/changenow.html", label: "ChangeNOW (full)" },
+          { path: "src/buyEmbed.html", label: "Buy widget (embed)" },
+          { path: "src/letsexchange.html", label: "LetsExchange" },
+          { path: "src/swap.html", label: "Swap", thumb: "src/img-marketing/swap.webp" },
+          { path: "src/swap/index_original.html", label: "Swap (legacy)" },
+          { path: "src/uniswap.html", label: "Uniswap (eHEX)" },
+          { path: "src/piteas.html", label: "Piteas aggregator" },
+          { path: "src/pulse.html", label: "PulseChain router" },
+          { path: "src/gopulse.html", label: "Bridge to PulseChain" },
+        ],
+      },
+      {
+        title: "Learn & wiki",
+        routes: [
+          { path: "src/learn.html", label: "Learn (index)" },
+          { path: "src/learn/hex.html", label: "What is HEX?" },
+          { path: "src/learn/staking.html", label: "How staking works" },
+          { path: "src/learn/ladder.html", label: "Why ladder" },
+          { path: "src/learn/crypto.html", label: "Crypto basics" },
+          { path: "src/learn/tax.html", label: "Tax considerations" },
+          { path: "src/learn/storage.html", label: "Self-custody" },
+          { path: "src/learn/trade.html", label: "Trading on PulseX" },
+          { path: "src/learn/trust.html", label: "Trust & audits" },
+          { path: "src/learn/marketing.html", label: "Community marketing" },
+          { path: "src/wiki.html", label: "Wiki" },
+        ],
+      },
+      {
+        title: "Support & legal",
+        routes: [
+          { path: "src/support.html", label: "Support" },
+          { path: "src/support/more.html", label: "More help" },
+          { path: "src/support/success.html", label: "Submitted ✓" },
+          { path: "src/support/adm.html", label: "Support inbox (admin)" },
+          { path: "src/about.html", label: "About" },
+          { path: "src/brand.html", label: "Brand kit" },
+          { path: "src/disclaimer.html", label: "Disclaimer" },
+          { path: "src/privacy.html", label: "Privacy" },
+          { path: "src/tos.html", label: "Terms of service" },
+        ],
+      },
+      {
+        title: "Internal / curious",
+        routes: [
+          { path: "src/app.html", label: "App shell entry" },
+          { path: "src/admin2000.html", label: "Admin tools" },
+          { path: "src/admin2000/news.html", label: "News editor" },
+          { path: "src/[a].html", label: "Wallet share (dynamic)", actual: "src/[a].html" },
+          { path: "src/test.html", label: "Test (dev forgot to remove)" },
+        ],
+      },
+    ];
 
-// Palette for the auto-generated placeholder thumbnails, keyed by section.
-const SECTION_COLORS = {
-  "Landing & onboarding": ["#ff4a2b", "#f48a1f"],
-  "Portfolio & staking":  ["#d92cb0", "#ff4a2b"],
-  "Market & charts":      ["#45a7ff", "#7a3bff"],
-  "Buy / on-ramp / swap": ["#1ed760", "#45a7ff"],
-  "Learn & wiki":         ["#ffd23f", "#f48a1f"],
-  "Support & legal":      ["#7a3bff", "#d92cb0"],
-  "Internal / curious":   ["#5a8b5a", "#1ed760"],
-};
+    // Palette for the auto-generated placeholder thumbnails, keyed by section.
+    const SECTION_COLORS = {
+      "Landing & onboarding": ["#ff4a2b", "#f48a1f"],
+      "Portfolio & staking": ["#d92cb0", "#ff4a2b"],
+      "Market & charts": ["#45a7ff", "#7a3bff"],
+      "Buy / on-ramp / swap": ["#1ed760", "#45a7ff"],
+      "Learn & wiki": ["#ffd23f", "#f48a1f"],
+      "Support & legal": ["#7a3bff", "#d92cb0"],
+      "Internal / curious": ["#5a8b5a", "#1ed760"],
+    };
 
-function placeholderThumb(label, route, colors, icon) {
-  const [c1, c2] = colors;
-  // Phone-frame-shaped SVG mockup: gradient bg, fake header bar, big label, fake nav bar.
-  return `
+    function placeholderThumb(label, route, colors, icon) {
+      const [c1, c2] = colors;
+      // Phone-frame-shaped SVG mockup: gradient bg, fake header bar, big label, fake nav bar.
+      return `
   <svg viewBox="0 0 200 356" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
     <defs>
-      <linearGradient id="g_${route.replace(/[^a-z0-9]/gi,'_')}" x1="0" x2="1" y1="0" y2="1">
+      <linearGradient id="g_${route.replace(/[^a-z0-9]/gi, '_')}" x1="0" x2="1" y1="0" y2="1">
         <stop offset="0%" stop-color="#11183b"/>
         <stop offset="100%" stop-color="#110b32"/>
       </linearGradient>
-      <linearGradient id="ga_${route.replace(/[^a-z0-9]/gi,'_')}" x1="0" x2="1" y1="0" y2="0">
+      <linearGradient id="ga_${route.replace(/[^a-z0-9]/gi, '_')}" x1="0" x2="1" y1="0" y2="0">
         <stop offset="0%" stop-color="${c1}"/>
         <stop offset="100%" stop-color="${c2}"/>
       </linearGradient>
     </defs>
-    <rect width="200" height="356" fill="url(#g_${route.replace(/[^a-z0-9]/gi,'_')})"/>
+    <rect width="200" height="356" fill="url(#g_${route.replace(/[^a-z0-9]/gi, '_')})"/>
     <!-- header bar -->
     <rect x="0" y="0" width="200" height="36" fill="rgba(0,0,0,0.25)"/>
     <text x="14" y="22" font-family="Russo One, sans-serif" font-size="11" fill="#fff">HEX</text>
-    <text x="36" y="22" font-family="Russo One, sans-serif" font-size="11" fill="url(#ga_${route.replace(/[^a-z0-9]/gi,'_')})">scout</text>
+    <text x="36" y="22" font-family="Russo One, sans-serif" font-size="11" fill="url(#ga_${route.replace(/[^a-z0-9]/gi, '_')})">scout</text>
     <circle cx="183" cy="18" r="5" fill="rgba(255,255,255,0.15)"/>
     <!-- main badge -->
     <circle cx="100" cy="145" r="44" fill="rgba(255,255,255,0.04)" stroke="${c1}" stroke-width="1.5" stroke-opacity="0.5"/>
@@ -172,57 +176,58 @@ function placeholderThumb(label, route, colors, icon) {
     <circle cx="132" cy="338" r="3.5" fill="rgba(255,255,255,0.4)"/>
     <circle cx="178" cy="338" r="3.5" fill="rgba(255,255,255,0.4)"/>
   </svg>`;
-}
+    }
 
-// Pick a unicode glyph that fits each section's vibe.
-function iconFor(label) {
-  const l = label.toLowerCase();
-  if (/(portfolio|asset)/.test(l)) return "💎";
-  if (/(stake|stak)/.test(l)) return "🔒";
-  if (/(ladder)/.test(l)) return "🪜";
-  if (/(league|whale)/.test(l)) return "🦈";
-  if (/(market|chart|deep|stat|liquid)/.test(l)) return "📈";
-  if (/(news)/.test(l)) return "📰";
-  if (/(buy|ramp|onramp)/.test(l)) return "💳";
-  if (/(swap|trade)/.test(l)) return "🔄";
-  if (/(bridge|pulse|uniswap|piteas)/.test(l)) return "🌉";
-  if (/(learn|wiki)/.test(l)) return "📘";
-  if (/(support|help)/.test(l)) return "💬";
-  if (/(success|submitted)/.test(l)) return "✓";
-  if (/(privacy|tos|disclaimer)/.test(l)) return "⚖";
-  if (/(admin|test|dev)/.test(l)) return "🔧";
-  if (/(brand)/.test(l)) return "🎨";
-  if (/(wallet|share)/.test(l)) return "👛";
-  if (/(setting)/.test(l)) return "⚙";
-  if (/(about)/.test(l)) return "ℹ";
-  if (/(start|onboard|home|get started|home)/.test(l)) return "🚀";
-  return "▸";
-}
+    // Pick a unicode glyph that fits each section's vibe.
+    function iconFor(label) {
+      const l = label.toLowerCase();
+      if (/(portfolio|asset)/.test(l)) return "💎";
+      if (/(stake|stak)/.test(l)) return "🔒";
+      if (/(ladder)/.test(l)) return "🪜";
+      if (/(league|whale)/.test(l)) return "🦈";
+      if (/(market|chart|deep|stat|liquid)/.test(l)) return "📈";
+      if (/(news)/.test(l)) return "📰";
+      if (/(buy|ramp|onramp)/.test(l)) return "💳";
+      if (/(swap|trade)/.test(l)) return "🔄";
+      if (/(bridge|pulse|uniswap|piteas)/.test(l)) return "🌉";
+      if (/(learn|wiki)/.test(l)) return "📘";
+      if (/(support|help)/.test(l)) return "💬";
+      if (/(success|submitted)/.test(l)) return "✓";
+      if (/(privacy|tos|disclaimer)/.test(l)) return "⚖";
+      if (/(admin|test|dev)/.test(l)) return "🔧";
+      if (/(brand)/.test(l)) return "🎨";
+      if (/(wallet|share)/.test(l)) return "👛";
+      if (/(setting)/.test(l)) return "⚙";
+      if (/(about)/.test(l)) return "ℹ";
+      if (/(start|onboard|home|get started|home)/.test(l)) return "🚀";
+      return "▸";
+    }
 
-const root = document.getElementById("sections");
-SECTIONS.forEach(s => {
-  const colors = SECTION_COLORS[s.title] || ["#ff4a2b", "#d92cb0"];
-  const sec = document.createElement("section");
-  sec.style.marginTop = "30px";
-  sec.innerHTML = `<h2 style="font-size:18px;margin-bottom:4px;color:#fff;">${s.title}</h2>` +
-                  (s.desc ? `<p style="color:var(--text-muted);font-size:13px;margin:0 0 14px;">${s.desc}</p>` : "");
-  const grid = document.createElement("div");
-  grid.className = "museum-grid";
-  s.routes.forEach(r => {
-    const href = r.actual || r.path;
-    const thumb = r.thumb
-      ? `<img src="${r.thumb}" alt="" loading="lazy">`
-      : placeholderThumb(r.label, r.path.replace(/\.html$/, ""), colors, iconFor(r.label));
-    grid.innerHTML += `
+    const root = document.getElementById("sections");
+    SECTIONS.forEach(s => {
+      const colors = SECTION_COLORS[s.title] || ["#ff4a2b", "#d92cb0"];
+      const sec = document.createElement("section");
+      sec.style.marginTop = "30px";
+      sec.innerHTML = `<h2 style="font-size:18px;margin-bottom:4px;color:#fff;">${s.title}</h2>` +
+        (s.desc ? `<p style="color:var(--text-muted);font-size:13px;margin:0 0 14px;">${s.desc}</p>` : "");
+      const grid = document.createElement("div");
+      grid.className = "museum-grid";
+      s.routes.forEach(r => {
+        const href = r.actual || r.path;
+        const thumb = r.thumb
+          ? `<img src="${r.thumb}" alt="" loading="lazy">`
+          : placeholderThumb(r.label, r.path.replace(/\.html$/, ""), colors, iconFor(r.label));
+        grid.innerHTML += `
       <a class="museum-card" href="${href}">
         <div class="thumb">${thumb}</div>
         <div class="label">${r.label}</div>
         <div class="route">/${r.path.replace(/^src\//, "").replace(/\.html$/, "").replace(/^index$/, "")}</div>
       </a>`;
-  });
-  sec.appendChild(grid);
-  root.appendChild(sec);
-});
-</script>
+      });
+      sec.appendChild(grid);
+      root.appendChild(sec);
+    });
+  </script>
 </body>
+
 </html>

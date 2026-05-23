@@ -128,7 +128,7 @@ ships inside `assets/public/`) or get a leak from the team directly.
 ## 5. Files added in this hunt
 
 ```
-evidence/
+dump/
   LEAK-HUNT.md                          ← this file
   extracted/
     leaked-credentials.md               ← the 2 keys + sibling app
@@ -168,7 +168,7 @@ build that fills in everything Wayback couldn't.
 | Package version | `1.0.34` (newer than anything on Play Store HTML when we scraped — 1.0.32 was the highest there) |
 
 Verbatim config + dex class list:
-[`evidence/apk/capacitor-confirmation.md`](apk/capacitor-confirmation.md)
+[`dump/apk/capacitor-confirmation.md`](apk/capacitor-confirmation.md)
 
 ### What the APK gave us that Wayback couldn't
 
