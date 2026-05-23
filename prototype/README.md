@@ -1,4 +1,4 @@
-# HEXscout · museum prototype
+# HEXscout · prototype
 
 A clean, from-scratch reconstruction of the retired HEXscout app - built
 to be navigated, not to be functional. Every number is fabricated. **Pure
@@ -14,11 +14,13 @@ design tokens.
 
 There is no server. Just open one of:
 
-- **`sitemap.html`** - gallery view, all 64 screens (recommended entry)
+- **`index.html`** - gallery view, all 64 screens (recommended entry)
 - **`src/index.html`** - the actual onboarding landing page
 
-Double-click in your file manager, or `xdg-open sitemap.html` / `open
-sitemap.html` / `start sitemap.html` from a terminal.
+Double-click in your file manager, or `xdg-open index.html` / `open
+index.html` / `start index.html` from a terminal.
+
+Online: <https://elsheraey.github.io/hexscout-autopsy/>
 
 Every internal link uses relative paths with `.html` extensions, so
 clicking around just navigates between files on disk.
@@ -28,7 +30,8 @@ clicking around just navigates between files on disk.
 ```
 prototype/
 ├── README.md          ← this file
-├── sitemap.html       ← museum index, the entry point
+├── index.html         ← gallery of all 64 screens, the entry point
+├── screenshots/       ← mobile screenshot of every page (Playwright-generated)
 └── src/               ← everything else
     ├── index.html
     ├── portfolio.html, stake.html, market.html, ...   (~35 root pages)
@@ -54,9 +57,9 @@ prototype/
 | `src/market.html` | Toggle time-range buttons (cosmetic) |
 | `src/swap.html` | Type in From input - conversion happens live |
 | `src/settings.html` | Click any switch - it toggles |
-| `sitemap.html` | One-click access to every screen |
+| `index.html` | One-click access to every screen |
 
-Click the HEXscout logo on any page → goes back to the sitemap.
+Click the HEXscout logo on any page → goes back to the gallery.
 
 ## How it's wired
 
@@ -66,7 +69,7 @@ Each HTML page sets `window.PREFIX` based on its folder depth within
 that prefix to build the bottom-nav and logo hrefs. Same nav code works
 no matter where it's loaded from.
 
-The logo link points to `${PFX}../sitemap.html` since the sitemap lives
+The logo link points to `${PFX}../index.html` since the gallery lives
 one level above `src/`.
 
 ## Going more offline
@@ -81,7 +84,7 @@ Everything else (icons, charts, layout, screenshots) is local.
 
 ## Caveat
 
-This is a museum reconstruction, not the real app. Real HEXscout is at
+This is a prototype reconstruction, not the real app. Real HEXscout is at
 `../snapshot/` if you want to see the actual minified production code.
 Numbers, names, news headlines, wallet addresses, T-share counts - all
 fabricated to look plausible.

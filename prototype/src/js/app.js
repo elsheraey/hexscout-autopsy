@@ -24,7 +24,7 @@
 
     const header = $(
       `<header class="app-header">
-         <a class="logo" href="${PFX}../sitemap.html" title="All screens">HEX<span class="ix">scout</span></a>
+         <a class="logo" href="${PFX}../index.html" title="All screens">HEX<span class="ix">scout</span></a>
          <div class="chip-row">
            <span class="chip dot">PulseChain</span>
            <button class="icon-btn" title="Menu" aria-label="Menu">☰</button>

@@ -1,5 +1,5 @@
-// Sample data for the HEXscout prototype. None of this is real — every number
-// is fabricated for the museum experience.
+// Sample data for the HEXscout prototype. None of this is real - every number
+// is fabricated for the prototype experience.
 
 window.SAMPLE = {
   user: { wallet: "0xAB12…3F4D", ens: "moonbeam.pls" },

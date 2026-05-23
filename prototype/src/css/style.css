@@ -253,21 +253,21 @@ table.tbl { width: 100%; border-collapse: collapse; font-size: 13px; }
 /* Lightbox-ish modal placeholder (not used by default) */
 .hidden { display: none !important; }
 
-/* Sitemap (museum index) — overrides the phone-frame width */
-.museum { max-width: 1180px; padding: 30px 28px 60px; }
-.museum h1 { font-size: 28px; margin-bottom: 6px; }
-.museum .lede { color: var(--text-muted); max-width: 640px; margin-bottom: 24px; }
-.museum-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
-.museum-card {
+/* Prototype index page - overrides the phone-frame width */
+.prototype { max-width: 1180px; padding: 30px 28px 60px; }
+.prototype h1 { font-size: 28px; margin-bottom: 6px; }
+.prototype .lede { color: var(--text-muted); max-width: 640px; margin-bottom: 24px; }
+.prototype-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+.prototype-card {
   display: block; padding: 12px;
   background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
   transition: transform 0.15s, border-color 0.15s, background 0.15s;
 }
-.museum-card:hover { transform: translateY(-2px); border-color: var(--accent); background: var(--bg-card-2); }
-.museum-card .thumb { width: 100%; aspect-ratio: 9/16; background: #0a0a1c; border-radius: 8px; margin-bottom: 10px; overflow: hidden; display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 11px; }
-.museum-card .thumb img { width: 100%; height: 100%; object-fit: cover; }
-.museum-card .label { font-weight: 600; font-size: 14px; }
-.museum-card .route { font-family: ui-monospace, monospace; font-size: 12px; color: var(--accent); margin-top: 2px; }
+.prototype-card:hover { transform: translateY(-2px); border-color: var(--accent); background: var(--bg-card-2); }
+.prototype-card .thumb { width: 100%; aspect-ratio: 9/16; background: #0a0a1c; border-radius: 8px; margin-bottom: 10px; overflow: hidden; display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 11px; }
+.prototype-card .thumb img { width: 100%; height: 100%; object-fit: cover; }
+.prototype-card .label { font-weight: 600; font-size: 14px; }
+.prototype-card .route { font-family: ui-monospace, monospace; font-size: 12px; color: var(--accent); margin-top: 2px; }
 
 /* Scrollbar styling */
 ::-webkit-scrollbar { width: 8px; height: 8px; }
