@@ -1,8 +1,8 @@
 # HEXscout · museum prototype
 
-A clean, from-scratch reconstruction of the retired HEXscout app — built
+A clean, from-scratch reconstruction of the retired HEXscout app - built
 to be navigated, not to be functional. Every number is fabricated. **Pure
-static HTML / CSS / vanilla JS** — no server, no build step, no
+static HTML / CSS / vanilla JS** - no server, no build step, no
 dependencies. Open the entry point in a browser and click around.
 
 Unlike [`../snapshot/`](../snapshot/) (which extracts the production
@@ -14,8 +14,8 @@ design tokens.
 
 There is no server. Just open one of:
 
-- **`sitemap.html`** — gallery view, all 64 screens (recommended entry)
-- **`src/index.html`** — the actual onboarding landing page
+- **`sitemap.html`** - gallery view, all 64 screens (recommended entry)
+- **`src/index.html`** - the actual onboarding landing page
 
 Double-click in your file manager, or `xdg-open sitemap.html` / `open
 sitemap.html` / `start sitemap.html` from a terminal.
@@ -47,13 +47,13 @@ prototype/
 
 | Screen | Try this |
 |---|---|
-| `src/index.html` | Drag the investment slider — value updates |
+| `src/index.html` | Drag the investment slider - value updates |
 | `src/portfolio.html` | Donut chart + asset list render from SAMPLE data |
-| `src/stake.html` | Drag amount + days sliders — T-shares, APY, maturity all recalc live |
-| `src/ladder.html` | Drag rung-count slider — bar chart and schedule rebuild |
+| `src/stake.html` | Drag amount + days sliders - T-shares, APY, maturity all recalc live |
+| `src/ladder.html` | Drag rung-count slider - bar chart and schedule rebuild |
 | `src/market.html` | Toggle time-range buttons (cosmetic) |
-| `src/swap.html` | Type in From input — conversion happens live |
-| `src/settings.html` | Click any switch — it toggles |
+| `src/swap.html` | Type in From input - conversion happens live |
+| `src/settings.html` | Click any switch - it toggles |
 | `sitemap.html` | One-click access to every screen |
 
 Click the HEXscout logo on any page → goes back to the sitemap.
@@ -83,5 +83,5 @@ Everything else (icons, charts, layout, screenshots) is local.
 
 This is a museum reconstruction, not the real app. Real HEXscout is at
 `../snapshot/` if you want to see the actual minified production code.
-Numbers, names, news headlines, wallet addresses, T-share counts — all
+Numbers, names, news headlines, wallet addresses, T-share counts - all
 fabricated to look plausible.

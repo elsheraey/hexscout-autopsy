@@ -28,7 +28,7 @@ to the latest release:
 Every number, balance, and chart in `prototype/` is fabricated for
 navigation purposes. `snapshot/` runs the real production bundle locally
 but external APIs (CoinGecko, PulseChain RPC, WalletConnect, etc.) will
-fail or timeout — see `snapshot/README.md` for what works and what
+fail or timeout - see `snapshot/README.md` for what works and what
 doesn't.
 
 This is documentation of a retired product. Nothing here is endorsed by,
